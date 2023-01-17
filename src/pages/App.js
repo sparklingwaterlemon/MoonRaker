@@ -2,10 +2,12 @@ import './App.css';
 import { useState } from 'react';
 
 
+import PreLoadImagesFunc from '../utilities/PreLoadImagesFunc/PreLoadImagesFunc';
 import MoonComponent from '../components/MoonComponent/MoonComponent';
 import BackgroundComponent from "../components/BackgroundComponent/BackgroundComponent";
 import SearchBarComponent from '../components/SearchBarComponent/SearchBarComponent';
 import FlipDisplayComponent from '../components/FlipDisplayComponent/FlipDisplayComponent';
+
 
 export default function App() {
   // indexForDate & currMoonPhase SET in MoonComponents, passed down FlipDisplayComponent -to-> be rendered in ASideDatePhase
@@ -23,6 +25,7 @@ export default function App() {
 
   return (
     <>
+      <PreLoadImagesFunc />
       <section id="section-moon">
         {/* <BackgroundComponent /> */}
         <div className="leftside-moon">
@@ -43,8 +46,8 @@ export default function App() {
             cityLocation={cityLocation} 
             weatherAstroData={weatherAstroData}/>
         </div>
-
       </section>
+      
     </>
   );
 }
