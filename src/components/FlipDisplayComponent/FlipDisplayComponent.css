@@ -1,6 +1,6 @@
 .flip-container{
     position: fixed;
-    outline: 1px dashed limegreen;
+    /* outline: 1px dashed limegreen; */
     height: calc(100% - var(--search-container-height));
     width: inherit;
     top: 0;

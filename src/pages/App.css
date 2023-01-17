@@ -7,7 +7,8 @@
 }
 
 .leftside-moon{
-  background-color: slategray;
+  /* background-color: slategray; */
+  background-color: black;
   height: inherit;
   width: 50%;
 
@@ -16,7 +17,8 @@
 }
 
 .rightside-moon{
-  background-color: gray;
+  /* background-color: gray; */
+  background-color: black;
   height: inherit;
   width: 50%;
 
