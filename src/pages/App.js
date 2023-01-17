@@ -9,6 +9,7 @@ import SearchBarComponent from '../components/SearchBarComponent/SearchBarCompon
 import FlipDisplayComponent from '../components/FlipDisplayComponent/FlipDisplayComponent';
 
 import SettingScrollFunc from '../utilities/SettingScrollFunc/SettingScrollFunc';
+import SpikingScrollFunc from '../utilities/SpikingScrollFunc/SpikingScrollFunc';
 
 
 export default function App() {
@@ -50,6 +51,7 @@ export default function App() {
         </div>
       </section>
       <SettingScrollFunc />
+      <SpikingScrollFunc />
     </>
   );
 }
