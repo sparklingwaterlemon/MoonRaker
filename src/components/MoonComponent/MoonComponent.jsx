@@ -72,21 +72,23 @@ export default function MoonComponent({ setIndexForDate, setCurrMoonPhase }) {
 
     // -- useEffect to update to the new image when we declare a new image by setImage
     // -- canvasRef
-    const canvasRef = useRef(null);
+    const canvasRef = useRef({});
     useEffect(() => {
         const canvas = canvasRef.current;
         const context = canvas.getContext('2d');
 
-        canvas.width = 500;
+
+        canvas.width =  500;
         canvas.height = 500;
+        let _configcanvasWidth = 100;
+        let _configcanvasHeight = 100;
+
 
         context.drawImage(image, 0, 0, canvas.width, canvas.height);
     }, [image]);
 
-
-
-
     return (
         <canvas className="m-canvas" ref={canvasRef} />
+
     )
 };
