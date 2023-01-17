@@ -1,0 +1,43 @@
+.flip-container{
+    position: fixed;
+    outline: 1px dashed limegreen;
+    height: calc(100% - var(--search-container-height));
+    width: inherit;
+    top: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-container{
+    position: absolute;
+    width: auto;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flip-button{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: -20px;
+    right: -20px;
+
+    border-radius: 50%;
+    border-style: none;
+    border: 2px solid papayawhip;
+    background-color: gray;
+    
+    transition: 0.5s linear background-color;
+}
+.flip-button:hover{
+    background-color: blue;
+    cursor: pointer;
+}
+
+.hide-button{
+    display: none;
+}

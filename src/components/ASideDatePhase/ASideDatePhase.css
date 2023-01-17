@@ -1,0 +1,12 @@
+.a-side-container{
+    height: 150px;
+    width: 330px;  
+
+    background: lightgoldenrodyellow;
+    color: olivedrab;
+    font-size: 2em;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

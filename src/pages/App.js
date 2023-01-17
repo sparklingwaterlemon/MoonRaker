@@ -5,6 +5,7 @@ import { useState } from 'react';
 import MoonComponent from '../components/MoonComponent/MoonComponent';
 import BackgroundComponent from "../components/BackgroundComponent/BackgroundComponent";
 import SearchBarComponent from '../components/SearchBarComponent/SearchBarComponent';
+import FlipDisplayComponent from '../components/FlipDisplayComponent/FlipDisplayComponent';
 
 export default function App() {
   // indexForDate & currMoonPhase SET in MoonComponents, passed down FlipDisplayComponent -to-> be rendered in ASideDatePhase
@@ -34,7 +35,13 @@ export default function App() {
             setCityLocation={setCityLocation} 
             setWeatherAstroData={setWeatherAstroData} 
             setFlipAB={setFlipAB}/>
-
+          <FlipDisplayComponent 
+            flipAB={flipAB} 
+            setFlipAB={setFlipAB} 
+            indexForDate={indexForDate} 
+            currMoonPhase={currMoonPhase} 
+            cityLocation={cityLocation} 
+            weatherAstroData={weatherAstroData}/>
         </div>
 
       </section>
