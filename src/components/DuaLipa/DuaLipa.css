@@ -1,0 +1,26 @@
+.dua-container{
+    position: absolute;    
+    height: inherit;
+    width: 50%;
+}
+
+.dua-stage{
+    position: absolute;
+    bottom: 0;
+    height: 50vh;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    user-select: none;
+}
+
+.dua-img{
+    position: absolute;
+    height: 400px;
+    width: auto;
+    
+    padding-right: 30px;
+    transform: translateY(-56%);
+    z-index: 2;   
+}

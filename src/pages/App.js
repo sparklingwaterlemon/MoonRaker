@@ -3,8 +3,9 @@ import { useState } from 'react';
 
 
 import PreLoadImagesFunc from '../utilities/PreLoadImagesFunc/PreLoadImagesFunc';
-import MoonComponent from '../components/MoonComponent/MoonComponent';
 import BackgroundComponent from "../components/BackgroundComponent/BackgroundComponent";
+import MoonComponent from '../components/MoonComponent/MoonComponent';
+import DuaLipa from '../components/DuaLipa/DuaLipa';
 import SearchBarComponent from '../components/SearchBarComponent/SearchBarComponent';
 import FlipDisplayComponent from '../components/FlipDisplayComponent/FlipDisplayComponent';
 
@@ -30,11 +31,12 @@ export default function App() {
     <>
       <PreLoadImagesFunc />
       <section id="section-moon">
-        {/* <BackgroundComponent /> */}
+        <BackgroundComponent />
         <div className="leftside-moon">
           <MoonComponent 
             setIndexForDate={setIndexForDate}
             setCurrMoonPhase={setCurrMoonPhase}/>
+          <DuaLipa />
         </div>
         <div className="rightside-moon">
           <SearchBarComponent 
