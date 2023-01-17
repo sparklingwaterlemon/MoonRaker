@@ -1,12 +1,12 @@
 import "./SearchBarComponent.css";
-
 import { useState, useEffect } from "react";
 
-// created this 'stop/go' variable to prevent useEffect from fetchingAstroData prematurely
-// variables turns true once fetch(Coordinates)
+
+// Variable outside of SearchBarComponent - location does not change
+// goFetch variable used to prevent useEffect from fetchingAstroData prematurely
+// goFetch === true, once COORDINATES are fetched
 let goFetch = false;
                         
-
 
 export default function SearchBarComponent({setCityLocation,setWeatherAstroData, setFlipAB}){
     const [zipcode, setZipcode] = useState("");
@@ -17,12 +17,12 @@ export default function SearchBarComponent({setCityLocation,setWeatherAstroData,
     let OPENWEATHERMAP=`https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&exclude=hourly,minutely&units=imperial&appid=${process.env.REACT_APP_OWM}`;
 
 
+    // -- step 4 --> step 5 is "BSideWeatherAstro". passing setWeatherAstroData -> "BSideWeatherAstro"
     const fetchWeatherAstroData = async() => {
         try{
             await fetch(OPENWEATHERMAP)
             .then(res => res.json())
             .then(data => {
-                console.log("4");
                 setWeatherAstroData(data);
                 setFlipAB(true);
             })
@@ -31,14 +31,15 @@ export default function SearchBarComponent({setCityLocation,setWeatherAstroData,
         };
     };
 
+    // -- step 3
     useEffect(()=>{
         if(goFetch){
             fetchWeatherAstroData()
-            console.log("3");
         };
         // eslint-disable-next-line
     },[lat])
 
+    // -- step 1
     const fetchCoordinatesByZip = async() => {
         try{
             await fetch(COORDINATES)
@@ -55,15 +56,15 @@ export default function SearchBarComponent({setCityLocation,setWeatherAstroData,
         };      
     };
 
+    // -- start
+    // -- step 2
     const handleFormSubmit = async(evt) =>{
         evt.preventDefault();
         await fetchCoordinatesByZip();
-        console.log("2");
         setZipcode("");
     };
 
     const handleFormInput = (evt) =>{
-        console.log(evt.target.value);
         setZipcode(evt.target.value);
     };
 
