@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 
-import App from './pages/App';
+import App from './pages/App/App';
+// import TestPageOne from './pages/TestPageOne/TestPageOne';
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 

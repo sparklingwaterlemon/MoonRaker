@@ -2,16 +2,16 @@ import './App.css';
 import { useState } from 'react';
 
 
-import PreLoadImagesFunc from '../utilities/PreLoadImagesFunc/PreLoadImagesFunc';
-import BackgroundComponent from "../components/BackgroundComponent/BackgroundComponent";
-import MoonComponent from '../components/MoonComponent/MoonComponent';
-import DuaLipa from '../components/DuaLipa/DuaLipa';
-import SearchBarComponent from '../components/SearchBarComponent/SearchBarComponent';
-import FlipDisplayComponent from '../components/FlipDisplayComponent/FlipDisplayComponent';
+import PreLoadImagesFunc from '../../utilities/PreLoadImagesFunc/PreLoadImagesFunc';
+import BackgroundComponent from "../../components/BackgroundComponent/BackgroundComponent";
+import MoonComponent from '../../components/MoonComponent/MoonComponent';
+import DuaLipa from '../../components/DuaLipa/DuaLipa';
+import SearchBarComponent from '../../components/SearchBarComponent/SearchBarComponent';
+import FlipDisplayComponent from '../../components/FlipDisplayComponent/FlipDisplayComponent';
 
-import SettingScrollFunc from '../utilities/SettingScrollFunc/SettingScrollFunc';
-import SpikingScrollFunc from '../utilities/SpikingScrollFunc/SpikingScrollFunc';
-import ConstructionDisplay from '../utilities/ConstructionDisplay/ConstructionDisplay';
+import SettingScrollFunc from '../../utilities/SettingScrollFunc/SettingScrollFunc';
+import SpikingScrollFunc from '../../utilities/SpikingScrollFunc/SpikingScrollFunc';
+import ConstructionDisplay from '../../utilities/ConstructionDisplay/ConstructionDisplay';
 
 
 export default function App() {
