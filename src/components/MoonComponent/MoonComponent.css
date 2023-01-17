@@ -1,8 +1,8 @@
 .m-canvas {
     position: fixed;
     z-index: 1;
-    top: 30%;
-    transform: translateY(-30%);
+
+    top: 120px;
 
     border-radius: 50%;
     box-shadow:

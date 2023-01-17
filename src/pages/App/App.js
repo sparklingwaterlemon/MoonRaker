@@ -23,6 +23,8 @@ export default function App() {
   const [cityLocation, setCityLocation] = useState("no city");
   const [weatherAstroData, setWeatherAstroData] = useState(false);
 
+  // --- IF CHANGING PAGE HEIGHT , ALSO UPDATE SETTINGSCROLLFUN()!!
+  
   return (
     <>
       <PreLoadImagesFunc />

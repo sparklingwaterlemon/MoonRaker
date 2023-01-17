@@ -7,7 +7,7 @@ export default function SettingScrollFunc() {
             left: 0,
         });
         window.scroll({
-            top: 5000,
+            top: 6000,
             left: 0,
         });
     }, []);

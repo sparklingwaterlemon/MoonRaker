@@ -7,20 +7,22 @@
 .dua-stage{
     position: absolute;
     bottom: 0;
-    height: 50vh;
+    height: 100vh;
     width: 100%;
 
     display: flex;
     justify-content: center;
     user-select: none;
+    /* outline: 2px solid red; */
 }
 
 .dua-img{
     position: absolute;
-    height: 400px;
+    height: 430px;
     width: auto;
     
     padding-right: 30px;
-    transform: translateY(-56%);
+    /* outline: 2px solid red; */
+    top: 185px;
     z-index: 2;   
 }
