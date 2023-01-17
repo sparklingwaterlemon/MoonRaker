@@ -1,4 +1,5 @@
 import "./SearchBarComponent.css";
+
 import { useState, useEffect } from "react";
 
 // created this 'stop/go' variable to prevent useEffect from fetchingAstroData prematurely
@@ -8,7 +9,7 @@ let goFetch = false;
 
 
 export default function SearchBarComponent({setCityLocation,setWeatherAstroData, setFlipAB}){
-    const [zipcode, setZipcode] = useState();
+    const [zipcode, setZipcode] = useState("");
     const [lat, setLat] = useState();
     const [lon, setLon] = useState();
 
@@ -69,9 +70,12 @@ export default function SearchBarComponent({setCityLocation,setWeatherAstroData,
     return(
         <div className="zip-search-container">
             <form onSubmit={handleFormSubmit} autoComplete="off">
-                <input className="zip-search-input" type="text" placeholder="enter zip only" 
+                <input className="zip-search-input" 
+                    type="text" 
+                    placeholder="enter zip only" 
                     value={zipcode} 
-                    onChange={handleFormInput} required />
+                    onChange={handleFormInput} 
+                    required />
             </form>
         </div>
     )
