@@ -1,17 +1,18 @@
 #section-moon {
   --landing-page-height: 5000px;
   height: var(--landing-page-height);
-  
   display: flex;
 }
+
 .leftside-moon{
-  background-color: black;
+  background-color: slategray;
   height: inherit;
   width: 50%;
 
   display: flex;
   justify-content: center;
 }
+
 .rightside-moon{
   background-color: gray;
   height: inherit;

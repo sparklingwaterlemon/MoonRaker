@@ -1,13 +1,17 @@
 .m-b-container{
-    position: absolute;
+    position: fixed;
     height: var(--landing-page-height);
+    height: 100vh;
+    width: 100%;
     max-width: 100%;
+    overflow: hidden;
 }
 
 .m-b-image{
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;   
-    object-position: 0% 40%;
+    position:relative;
+    width: 2100px;
+    height: auto;
+    object-fit: fill;
+    bottom: 800px;
 }
+/* screen wider than 2100px = change width to 100%; */

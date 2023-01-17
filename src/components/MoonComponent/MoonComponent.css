@@ -1,0 +1,12 @@
+.m-canvas {
+    position: fixed;
+    z-index: 1;
+    top: 30%;
+    transform: translateY(-30%);
+
+    border-radius: 50%;
+    box-shadow:
+        0px 0px 20px black,
+        0px 0px 30px black,
+        0px 0px 30px rgb(12,37,62);
+}
