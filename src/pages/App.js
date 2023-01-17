@@ -8,6 +8,8 @@ import BackgroundComponent from "../components/BackgroundComponent/BackgroundCom
 import SearchBarComponent from '../components/SearchBarComponent/SearchBarComponent';
 import FlipDisplayComponent from '../components/FlipDisplayComponent/FlipDisplayComponent';
 
+import SettingScrollFunc from '../utilities/SettingScrollFunc/SettingScrollFunc';
+
 
 export default function App() {
   // indexForDate & currMoonPhase SET in MoonComponents, passed down FlipDisplayComponent -to-> be rendered in ASideDatePhase
@@ -47,7 +49,7 @@ export default function App() {
             weatherAstroData={weatherAstroData}/>
         </div>
       </section>
-      
+      <SettingScrollFunc />
     </>
   );
 }
