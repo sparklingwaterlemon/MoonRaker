@@ -8,7 +8,7 @@ export default function PreLoadImagesFunc(){
         // -- (step 2) preloading the images
         const preloadFrame = (frame, frameIterator) => {
             let preimg = new Image();
-            preimg.src = MOONIMAGES[frame].imgRef;
+            preimg.src = MoonImages[frame].imgRef;
             // preimg.onload = function() {
             //     console.log("preimg", preimg);
             // };
