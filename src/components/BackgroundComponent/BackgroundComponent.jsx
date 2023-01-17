@@ -1,8 +1,10 @@
 import "./BackgroundComponent.css";
-
+import MoonImages from "../../assets/MoonImages/0000index";
 
 export default function BackgroundComponent(){
     return(
-        <h3> TEST H3 Background Component</h3>
+        <div className="m-b-container">
+            <img className="m-b-image" src={MoonImages[0].imgRef} alt="background"/>
+        </div>
     )
 }
