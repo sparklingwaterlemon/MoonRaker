@@ -4,6 +4,7 @@ import { useState } from 'react';
 
 import MoonComponent from '../components/MoonComponent/MoonComponent';
 import BackgroundComponent from "../components/BackgroundComponent/BackgroundComponent";
+import SearchBarComponent from '../components/SearchBarComponent/SearchBarComponent';
 
 export default function App() {
   // indexForDate & currMoonPhase SET in MoonComponents, passed down FlipDisplayComponent -to-> be rendered in ASideDatePhase
@@ -27,9 +28,12 @@ export default function App() {
           <MoonComponent 
             setIndexForDate={setIndexForDate}
             setCurrMoonPhase={setCurrMoonPhase}/>
-
         </div>
         <div className="rightside-moon">
+          <SearchBarComponent 
+            setCityLocation={setCityLocation} 
+            setWeatherAstroData={setWeatherAstroData} 
+            setFlipAB={setFlipAB}/>
 
         </div>
 
