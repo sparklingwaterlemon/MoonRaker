@@ -8,25 +8,20 @@ import MoonComponent from '../../components/MoonComponent/MoonComponent';
 import DuaLipa from '../../components/DuaLipa/DuaLipa';
 import SearchBarComponent from '../../components/SearchBarComponent/SearchBarComponent';
 import FlipDisplayComponent from '../../components/FlipDisplayComponent/FlipDisplayComponent';
-
 import SettingScrollFunc from '../../utilities/SettingScrollFunc/SettingScrollFunc';
 import SpikingScrollFunc from '../../utilities/SpikingScrollFunc/SpikingScrollFunc';
 import ConstructionDisplay from '../../utilities/ConstructionDisplay/ConstructionDisplay';
 
 
 export default function App() {
-  // indexForDate & currMoonPhase SET in MoonComponents, passed down FlipDisplayComponent -to-> be rendered in ASideDatePhase
+  // indexForDate & currMoonPhase SET in "MoonComponents". Used in "FlipDisplayComponent" -to-> "ASideDatePhase"
   const [indexForDate, setIndexForDate] = useState();
   const [currMoonPhase, setCurrMoonPhase] = useState();
-  // for FlipDisplayComponent -> passed down to -> SearchBarComponent to be triggered there as well
+  // flipAB used for FlipDisplayComponent. Passed/ to be trigged in "SearchBarComponent"
   const [flipAB, setFlipAB] = useState(false);
-  // have to get cityLocation from 'COORDINATE' API fetch from "SearchBarComponent" to render data in --FlipDisplayComponet--to-->BSideWeatherAstro
+  // cityLocation & weatherAstroData SET in "SearchBarComponent". Used in "FlipDisplayComponet" -to-> "BSideWeatherAstro"
   const [cityLocation, setCityLocation] = useState("no city");
-  // weatherAstroData SET in SearchComponent, passed down FlipDisplayComponent -to-> be rendered in BSideWeatherAstro 
   const [weatherAstroData, setWeatherAstroData] = useState(false);
-
-
-
 
   return (
     <>
@@ -58,4 +53,4 @@ export default function App() {
       <SpikingScrollFunc />
     </>
   );
-}
+};

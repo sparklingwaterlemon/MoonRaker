@@ -1,5 +1,4 @@
 import "./MoonComponent.css";
-
 import { useState, useEffect, useRef } from "react";
 import MoonImages from "../../assets/MoonImages/0000index";
 import topImageDayNumber from "../../utilities/DayDateFunc/DayDateFunc";
