@@ -11,6 +11,7 @@ import FlipDisplayComponent from '../components/FlipDisplayComponent/FlipDisplay
 
 import SettingScrollFunc from '../utilities/SettingScrollFunc/SettingScrollFunc';
 import SpikingScrollFunc from '../utilities/SpikingScrollFunc/SpikingScrollFunc';
+import ConstructionDisplay from '../utilities/ConstructionDisplay/ConstructionDisplay';
 
 
 export default function App() {
@@ -52,6 +53,7 @@ export default function App() {
             weatherAstroData={weatherAstroData}/>
         </div>
       </section>
+      <ConstructionDisplay />
       <SettingScrollFunc />
       <SpikingScrollFunc />
     </>
