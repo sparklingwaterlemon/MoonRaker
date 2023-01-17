@@ -1,10 +1,13 @@
 import './App.css';
+import BackgroundComponent from './components/BackgroundComponent/BackgroundComponent';
 
 function App() {
   return (
-    <div className="App">
-      TEST
-    </div>
+    <>
+      <section id="section-moon">
+        <BackgroundComponent />
+      </section>
+    </>
   );
 }
 
