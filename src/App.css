@@ -4,3 +4,21 @@
   
   display: flex;
 }
+.leftside-moon{
+  background-color: black;
+  height: inherit;
+  width: 50%;
+
+  display: flex;
+  justify-content: center;
+}
+.rightside-moon{
+  background-color: gray;
+  height: inherit;
+  width: 50%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  --search-container-height: 120px;
+}

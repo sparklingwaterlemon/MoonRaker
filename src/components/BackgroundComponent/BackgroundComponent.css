@@ -1,11 +1,11 @@
 .m-b-container{
+    position: absolute;
     height: var(--landing-page-height);
     max-width: 100%;
-
-    position: fixed;
 }
 
 .m-b-image{
+    position: fixed;
     height: 100%;
     width: 100%;
     object-fit: cover;   

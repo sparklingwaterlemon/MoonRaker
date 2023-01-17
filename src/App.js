@@ -1,11 +1,18 @@
 import './App.css';
-import BackgroundComponent from './components/BackgroundComponent/BackgroundComponent';
+// import BackgroundComponent from './components/BackgroundComponent/BackgroundComponent';
 
 function App() {
   return (
     <>
       <section id="section-moon">
-        <BackgroundComponent />
+        {/* <BackgroundComponent /> */}
+        <div className="leftside-moon">
+        
+        </div>
+        <div className="rightside-moon">
+
+        </div>
+
       </section>
     </>
   );
