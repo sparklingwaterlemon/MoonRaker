@@ -85,13 +85,13 @@ export default function MoonComponent({ setIndexForDate, setCurrMoonPhase }) {
         updateMoon.src = currentFrame(frameIndex);
         updateMoon.onload = () => setImage(updateMoon);
 
-        // use to debug/ test incorrect frame rate/ index
-        console.log("*************************");
-        console.log("---scrollLocation", scrollLocation);
-        console.log("---maxscrollHeight----", maxScrollHeight);
-        console.log("---scrollFraction----", scrollFraction);
-        console.log("---scrollFraction * framecount----", scrollFraction * frameCount);
-        console.log("---frameIndex---", frameIndex);
+        // // use to debug/ test incorrect frame rate/ index
+        // console.log("*************************");
+        // console.log("---scrollLocation", scrollLocation);
+        // console.log("---maxscrollHeight----", maxScrollHeight);
+        // console.log("---scrollFraction----", scrollFraction);
+        // console.log("---scrollFraction * framecount----", scrollFraction * frameCount);
+        // console.log("---frameIndex---", frameIndex);
         
         // eslint-disable-next-line
     }, [scrollLocation]);
