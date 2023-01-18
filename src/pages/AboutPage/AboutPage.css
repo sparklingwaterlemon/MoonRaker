@@ -1,0 +1,19 @@
+#about-section{
+    height: 100vh;
+    width: 100vw;
+    outline: 10px solid black;
+    background-color: lavenderblush;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-container{
+    height: 500px;
+    width: 800px;
+    outline: 10px solid black;
+    border-radius: 10px;
+}
+.about-info{
+    font-size: 1.5em;
+}

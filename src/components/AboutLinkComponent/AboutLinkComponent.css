@@ -1,0 +1,45 @@
+.about-link-container{
+    /* border: 5px solid orange; */
+
+    position: absolute;
+    height: inherit;
+    width: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-link-stage{
+    position: absolute;
+    bottom: calc(var(--search-container-height) - 75px);
+
+    height: 75px;
+    width: 400px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-page-link{
+    width: inherit;
+    height: inherit;
+
+    font-size: 3em;
+    font-style: italic;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    outline: 5px solid whitesmoke;
+    background-color: slategray;
+    border-radius: 10px;
+}
+.about-page-link:visited{
+    color: whitesmoke;
+}
+.about-page-link:hover{
+    color: pink;
+}

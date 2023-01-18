@@ -18,11 +18,11 @@
 
 .dua-img{
     position: absolute;
-    height: 430px;
+    height: 420px;
     width: auto;
     
     padding-right: 30px;
     /* outline: 2px solid red; */
-    top: 185px;
+    top: 188px;
     z-index: 2;   
 }

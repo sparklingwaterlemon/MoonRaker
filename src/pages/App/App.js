@@ -6,6 +6,7 @@ import PreLoadImagesFunc from '../../utilities/PreLoadImagesFunc/PreLoadImagesFu
 import BackgroundComponent from "../../components/BackgroundComponent/BackgroundComponent";
 import MoonComponent from '../../components/MoonComponent/MoonComponent';
 import DuaLipa from '../../components/DuaLipa/DuaLipa';
+import AboutLinkComponent from '../../components/AboutLinkComponent/AboutLinkComponent';
 import SearchBarComponent from '../../components/SearchBarComponent/SearchBarComponent';
 import FlipDisplayComponent from '../../components/FlipDisplayComponent/FlipDisplayComponent';
 import SettingScrollFunc from '../../utilities/SettingScrollFunc/SettingScrollFunc';
@@ -35,6 +36,7 @@ export default function App() {
             setIndexForDate={setIndexForDate}
             setCurrMoonPhase={setCurrMoonPhase}/>
           <DuaLipa />
+          <AboutLinkComponent />
         </div>
         <div className="rightside-moon">
           <SearchBarComponent 
