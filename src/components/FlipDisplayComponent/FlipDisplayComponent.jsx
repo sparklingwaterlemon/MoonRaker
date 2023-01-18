@@ -9,7 +9,7 @@ export default function FlipDisplayComponent({flipAB, setFlipAB, indexForDate, c
     return(
         <div className="flip-container">
             <div className="button-container">
-                <button className={weatherAstroData ? "flip-button" : "hide-button"} onClick={() => setFlipAB(!flipAB)} />
+                <button className={weatherAstroData.current ? "flip-button" : "hide-button"} onClick={() => setFlipAB(!flipAB)} />
                 {flipAB && weatherAstroData.current
                     ? 
                     <BSideWeatherAstro 
