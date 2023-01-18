@@ -34,8 +34,8 @@ export default function ConstructionDisplay() {
                     <span className="c-header">UNDER re-CONSTRUCTION</span>
                     <span className="c-update">LAST MODIFIED ON {text}</span>
 
-                    Update - Created Basic About Page
-                    <br/> .. scroll down
+                    Update - basic workout around if invalid zip
+                    <br/> .. created basic about page... scroll down
                     <div className="c-links">
                         <a href="https://github.com/sparklingwaterlemon/MoonRaker" target="_blank" rel="noreferrer">github</a>
                         <button onClick={scrollDown}>Refresh Scroll</button>
