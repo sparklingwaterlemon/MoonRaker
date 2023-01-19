@@ -22,7 +22,7 @@ export default function SpikingScrollFunc() {
                 behavior: "smooth"
             });
             // console.log("SetTimeout - Spike2 - Centered Out");
-        }, 1000);
+        }, 1500);
     };
 
     useEffect(() => {

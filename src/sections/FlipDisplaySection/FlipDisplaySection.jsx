@@ -1,13 +1,13 @@
-import "./FlipDisplayComponent.css";
-import ASideDatePhase from "../ASideDatePhase/ASideDatePhase";
-import BSideWeatherAstro from "../BSideWeatherAstro/BSideWeatherAstro";
+import "./FlipDisplaySection.css";
+import ASideDatePhase from "../../components/ASideDatePhase/ASideDatePhase";
+import BSideWeatherAstro from "../../components/BSideWeatherAstro/BSideWeatherAstro";
 
 
-export default function FlipDisplayComponent({flipAB, setFlipAB, indexForDate, currMoonPhase, cityLocation, weatherAstroData}){
+export default function FlipDisplaySection({flipAB, setFlipAB, indexForDate, currMoonPhase, cityLocation, weatherAstroData}){
     // button is hidden if no weatherAstroData is present
 
     return(
-        <div className="flip-container">
+        <section id="flip-section">
             <div className="button-container">
                 <button className={weatherAstroData.current ? "flip-button" : "hide-button"} onClick={() => setFlipAB(!flipAB)} />
                 {flipAB && weatherAstroData.current
@@ -21,6 +21,6 @@ export default function FlipDisplayComponent({flipAB, setFlipAB, indexForDate, c
                         currMoonPhase={currMoonPhase}/>
                 }
             </div>
-        </div>
+        </section>
     )
 }

@@ -7,8 +7,8 @@ import BackgroundComponent from "../../components/BackgroundComponent/Background
 import MoonComponent from '../../components/MoonComponent/MoonComponent';
 import DuaLipa from '../../components/DuaLipa/DuaLipa';
 import AboutLinkComponent from '../../components/AboutLinkComponent/AboutLinkComponent';
-import FormSection from '../../components/FormSection/FormSection';
-import FlipDisplayComponent from '../../components/FlipDisplayComponent/FlipDisplayComponent';
+import FormSection from '../../sections/FormSection/FormSection';
+import FlipDisplaySection from '../../sections/FlipDisplaySection/FlipDisplaySection';
 import SettingScrollFunc from '../../utilities/SettingScrollFunc/SettingScrollFunc';
 import SpikingScrollFunc from '../../utilities/SpikingScrollFunc/SpikingScrollFunc';
 import ConstructionDisplay from '../../utilities/ConstructionDisplay/ConstructionDisplay';
@@ -43,7 +43,7 @@ export default function App() {
             setCityLocation={setCityLocation} 
             setWeatherAstroData={setWeatherAstroData} 
             setFlipAB={setFlipAB}/>
-          <FlipDisplayComponent 
+          <FlipDisplaySection 
             flipAB={flipAB} 
             setFlipAB={setFlipAB} 
             indexForDate={indexForDate} 

@@ -1,5 +1,5 @@
 import "./FormSection.css";
-import SearchBarComponent from "../SearchBarComponent/SearchBarComponent";
+import SearchBarComponent from "../../components/SearchBarComponent/SearchBarComponent";
 
 export default function FormSection({setCityLocation, setWeatherAstroData, setFlipAB}){
     return(
