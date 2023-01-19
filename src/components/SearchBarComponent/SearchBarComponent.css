@@ -19,11 +19,11 @@
     text-align: center;
     border: none;
     border-radius: 5px;
-    outline: 2px solid black;
+    outline: 3px solid black;
     background-color: whitesmoke;
     
 }
 
 .zip-search-input:focus{
-    outline: 2px solid dodgerblue;
+    outline: 3px solid dodgerblue;
 }
