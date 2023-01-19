@@ -65,7 +65,9 @@ export default function MoonSection({ setIndexForDate, setCurrMoonPhase }) {
             console.log("test leak");
             var cvs = canvasRef.current;
             var ctx = cvs.getContext('2d');
-            ctx.drawImage(holderImg, 500, 500)
+            cvs.width = 500;
+            cvs.height = 500;
+            ctx.drawImage(holderImg, 0, 0,cvs.width, cvs.height)
         };
         holderImg.src = currentFrame(1);
         // eslint-disable-next-line
