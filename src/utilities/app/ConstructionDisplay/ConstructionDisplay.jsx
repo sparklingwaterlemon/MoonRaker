@@ -34,9 +34,9 @@ export default function ConstructionDisplay() {
                     <span className="c-header">UNDER re-CONSTRUCTION</span>
                     <span className="c-update">LAST MODIFIED ON {text}</span>
 
-                    Update - improved readability / organization of code
-                    <br/> .. used useRouterError to create Error Page
-                    <br/> .. created back buttons. created a div to link login/signup page
+                    Update - created server.js
+                    <br/> .. npm i express, morgan, favicon, mongoose, connected to MongoDB
+                    <br/> .. set up development proxy express server port 3001
                     <div className="c-links">
                         <a href="https://github.com/sparklingwaterlemon/MoonRaker" target="_blank" rel="noreferrer">github</a>
                         <button onClick={scrollDown}>Refresh Scroll</button>

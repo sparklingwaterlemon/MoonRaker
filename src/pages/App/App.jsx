@@ -52,8 +52,8 @@ export default function App() {
             weatherAstroData={weatherAstroData}/>
         </div>
       </section>
-      {/* <ConstructionDisplay /> */}
-      {/* <SettingScrollFunc /> */}
+      <ConstructionDisplay />
+      <SettingScrollFunc />
       <SpikingScrollFunc />
     </>
   );
