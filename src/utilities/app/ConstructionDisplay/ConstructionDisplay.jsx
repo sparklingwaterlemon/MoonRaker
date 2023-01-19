@@ -38,7 +38,7 @@ export default function ConstructionDisplay() {
                     <br/> .. npm i express, morgan, favicon, mongoose, connected to MongoDB
                     <br/> .. set up development proxy express server port 3001
                     <div className="c-links">
-                        <a href="https://github.com/sparklingwaterlemon/MoonRaker" target="_blank" rel="noreferrer">github</a>
+                        <a href="https://github.com/sparklingwaterlemon/The-Great-Gig-in-the-Sky" target="_blank" rel="noreferrer">github</a>
                         <button onClick={scrollDown}>Refresh Scroll</button>
                     </div>
                 </div>
