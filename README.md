@@ -1,3 +1,11 @@
+EXPAND BACKGROUND COMPONENT HEIGHT NO OVERFLOW
+MAKE SURE PRELOADING TO BOTTOM AND TOP
+SET TIME OUT FOR A BIT LONGER
+SCROLL TO TODAY ARROWS NEXT TO SEARCH
+SCROLL TO BOTTOM ARROWS NEXT TO SEARCH
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

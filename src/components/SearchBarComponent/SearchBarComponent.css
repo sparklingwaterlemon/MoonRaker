@@ -1,4 +1,4 @@
-.zip-search-container{
+/* .zip-search-container{
     position: fixed;
     height: var(--search-container-height);
     width: inherit;
@@ -8,8 +8,8 @@
     justify-content: center;
     align-items: flex-start;
 
-    /* outline: 1px dashed limegreen; */
-}
+    outline: 1px dashed limegreen;
+} */
 
 .zip-search-input{
     width: 200px;

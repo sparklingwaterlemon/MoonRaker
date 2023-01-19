@@ -7,7 +7,7 @@ import BackgroundComponent from "../../components/BackgroundComponent/Background
 import MoonComponent from '../../components/MoonComponent/MoonComponent';
 import DuaLipa from '../../components/DuaLipa/DuaLipa';
 import AboutLinkComponent from '../../components/AboutLinkComponent/AboutLinkComponent';
-import SearchBarComponent from '../../components/SearchBarComponent/SearchBarComponent';
+import FormSection from '../../components/FormSection/FormSection';
 import FlipDisplayComponent from '../../components/FlipDisplayComponent/FlipDisplayComponent';
 import SettingScrollFunc from '../../utilities/SettingScrollFunc/SettingScrollFunc';
 import SpikingScrollFunc from '../../utilities/SpikingScrollFunc/SpikingScrollFunc';
@@ -39,7 +39,7 @@ export default function App() {
           <AboutLinkComponent />
         </div>
         <div className="rightside-moon">
-          <SearchBarComponent 
+          <FormSection 
             setCityLocation={setCityLocation} 
             setWeatherAstroData={setWeatherAstroData} 
             setFlipAB={setFlipAB}/>
@@ -52,7 +52,7 @@ export default function App() {
             weatherAstroData={weatherAstroData}/>
         </div>
       </section>
-      <ConstructionDisplay />
+      {/* <ConstructionDisplay /> */}
       <SettingScrollFunc />
       <SpikingScrollFunc />
     </>
