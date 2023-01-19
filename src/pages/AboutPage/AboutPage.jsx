@@ -1,8 +1,11 @@
 import "./AboutPage.css";
+import { useNavigate } from "react-router-dom";
 
 export default function AboutPage(){
+    const navigate = useNavigate();
     return(
         <section id="about-section">
+            <button className="about-back-button" onClick={()=>navigate(-1)}>Back</button>
             <div className="about-container">
                 <div className="about-links">
                     <span className="about-header">

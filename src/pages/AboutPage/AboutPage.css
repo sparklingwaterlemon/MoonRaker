@@ -10,6 +10,13 @@
     justify-content: center;
     align-items: center;
 }
+.about-back-button{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 100px;
+    cursor: pointer;
+}
 .about-container{
     height: 500px;
     width: 800px;
