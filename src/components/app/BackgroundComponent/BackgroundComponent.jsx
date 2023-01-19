@@ -1,5 +1,5 @@
 import "./BackgroundComponent.css";
-import MoonImages from "../../assets/MoonImages/0000index";
+import MoonImages from "../../../assets/app/MoonImages/0000index";
 
 export default function BackgroundComponent(){
     return(

@@ -1,5 +1,5 @@
 import "./FormSection.css";
-import SearchBarComponent from "../../components/SearchBarComponent/SearchBarComponent";
+import SearchBarComponent from "../../../components/app/SearchBarComponent/SearchBarComponent";
 import { Link } from "react-router-dom";
 
 

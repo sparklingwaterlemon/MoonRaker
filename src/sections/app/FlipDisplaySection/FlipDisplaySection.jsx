@@ -1,6 +1,6 @@
 import "./FlipDisplaySection.css";
-import ASideDatePhase from "../../components/ASideDatePhase/ASideDatePhase";
-import BSideWeatherAstro from "../../components/BSideWeatherAstro/BSideWeatherAstro";
+import ASideDatePhase from "../../../components/app/ASideDatePhase/ASideDatePhase";
+import BSideWeatherAstro from "../../../components/app/BSideWeatherAstro/BSideWeatherAstro";
 
 
 export default function FlipDisplaySection({flipAB, setFlipAB, indexForDate, currMoonPhase, cityLocation, weatherAstroData}){

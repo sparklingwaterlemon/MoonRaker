@@ -1,5 +1,5 @@
 import "./ASideDatePhase.css";
-import topImageDayNumber from "../../utilities/DayDateFunc/DayDateFunc";
+import topImageDayNumber from "../../../utilities/app/DayDateFunc/DayDateFunc";
 
 export default function ASideDatePhase({indexForDate, currMoonPhase}){  
     // taking the index value, ie. 31 and converting it back to a date = January 31

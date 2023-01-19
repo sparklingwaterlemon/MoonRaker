@@ -2,16 +2,16 @@ import './App.css';
 import { useState } from 'react';
 
 
-import PreLoadImagesFunc from '../../utilities/PreLoadImagesFunc/PreLoadImagesFunc';
-import BackgroundComponent from "../../components/BackgroundComponent/BackgroundComponent";
-import MoonSection from '../../sections/MoonSection/MoonSection';
-import DuaLipa from '../../components/DuaLipa/DuaLipa';
-import AboutLinkComponent from '../../components/AboutLinkComponent/AboutLinkComponent';
-import FormSection from '../../sections/FormSection/FormSection';
-import FlipDisplaySection from '../../sections/FlipDisplaySection/FlipDisplaySection';
-import SettingScrollFunc from '../../utilities/SettingScrollFunc/SettingScrollFunc';
-import SpikingScrollFunc from '../../utilities/SpikingScrollFunc/SpikingScrollFunc';
-import ConstructionDisplay from '../../utilities/ConstructionDisplay/ConstructionDisplay';
+import PreLoadImagesFunc from '../../utilities/app/PreLoadImagesFunc/PreLoadImagesFunc';
+import BackgroundComponent from '../../components/app/BackgroundComponent/BackgroundComponent';
+import MoonSection from '../../sections/app/MoonSection/MoonSection';
+import DuaLipa from '../../components/app/DuaLipa/DuaLipa';
+import AboutLinkComponent from '../../components/app/AboutLinkComponent/AboutLinkComponent';
+import FormSection from '../../sections/app/FormSection/FormSection';
+import FlipDisplaySection from '../../sections/app/FlipDisplaySection/FlipDisplaySection';
+import SettingScrollFunc from '../../utilities/app/SettingScrollFunc/SettingScrollFunc';
+import SpikingScrollFunc from '../../utilities/app/SpikingScrollFunc/SpikingScrollFunc';
+import ConstructionDisplay from '../../utilities/app/ConstructionDisplay/ConstructionDisplay';
 
 
 export default function App() {
@@ -52,7 +52,7 @@ export default function App() {
             weatherAstroData={weatherAstroData}/>
         </div>
       </section>
-      <ConstructionDisplay />
+      {/* <ConstructionDisplay /> */}
       {/* <SettingScrollFunc /> */}
       <SpikingScrollFunc />
     </>
