@@ -53,7 +53,7 @@ export default function App() {
         </div>
       </section>
       <ConstructionDisplay />
-      <SettingScrollFunc />
+      {/* <SettingScrollFunc /> */}
       <SpikingScrollFunc />
     </>
   );
