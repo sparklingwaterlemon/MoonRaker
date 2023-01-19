@@ -34,8 +34,9 @@ export default function ConstructionDisplay() {
                     <span className="c-header">UNDER re-CONSTRUCTION</span>
                     <span className="c-update">LAST MODIFIED ON {text}</span>
 
-                    Update - basic workout around if invalid zip
-                    <br/> .. created basic about page... scroll down
+                    Update - improved readability / organization of code
+                    <br/> .. used useRouterError to create Error Page
+                    <br/> .. created back buttons. created a div to link login/signup page
                     <div className="c-links">
                         <a href="https://github.com/sparklingwaterlemon/MoonRaker" target="_blank" rel="noreferrer">github</a>
                         <button onClick={scrollDown}>Refresh Scroll</button>
