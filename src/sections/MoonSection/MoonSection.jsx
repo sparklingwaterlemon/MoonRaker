@@ -1,10 +1,10 @@
-import "./MoonComponent.css";
+import "./MoonSection.css";
 import { useState, useEffect, useRef } from "react";
 import MoonImages from "../../assets/MoonImages/0000index";
 import topImageDayNumber from "../../utilities/DayDateFunc/DayDateFunc";
 
 
-export default function MoonComponent({ setIndexForDate, setCurrMoonPhase }) {
+export default function MoonSection({ setIndexForDate, setCurrMoonPhase }) {
     const frameCount = 91;  
     
     // --- Step 1 -- setScrollLocation --triggers--> Step 2 

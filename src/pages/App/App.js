@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 import PreLoadImagesFunc from '../../utilities/PreLoadImagesFunc/PreLoadImagesFunc';
 import BackgroundComponent from "../../components/BackgroundComponent/BackgroundComponent";
-import MoonComponent from '../../components/MoonComponent/MoonComponent';
+import MoonSection from '../../sections/MoonSection/MoonSection';
 import DuaLipa from '../../components/DuaLipa/DuaLipa';
 import AboutLinkComponent from '../../components/AboutLinkComponent/AboutLinkComponent';
 import FormSection from '../../sections/FormSection/FormSection';
@@ -32,7 +32,7 @@ export default function App() {
       <section id="section-moon">
         <BackgroundComponent />
         <div className="leftside-moon">
-          <MoonComponent 
+          <MoonSection 
             setIndexForDate={setIndexForDate}
             setCurrMoonPhase={setCurrMoonPhase}/>
           <DuaLipa />
