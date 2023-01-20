@@ -1,17 +1,17 @@
 import "./PortalPage.css";
 import { useState } from "react";
 import JournalPage from "../JournalPage/JournalPage";
-import TestPageOne from "../TestPageOne/TestPageOne";
+import AuthPage from "../AuthPage/AuthPage";
 
 export default function PortalPage() {
-    const [astronaut, setAstronaut] = useState();
-    
+    const [astronaut, setAstronaut] = useState(null);
+
     return (
         <main id="portal-page">
-            {astronaut !== undefined ?
-                <TestPageOne />
-                :
+            {astronaut !== null ?
                 <JournalPage />
+                :
+                <AuthPage />
             }
         </main>
     )
