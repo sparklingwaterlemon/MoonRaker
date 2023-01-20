@@ -6,6 +6,7 @@ import App from './pages/App/App';
 import ErrorPage from './pages/ErrorPage/ErrorPage';
 import AboutPage from './pages/AboutPage/AboutPage';
 import PortalPage from './pages/PortalPage/PortalPage';
+import JournalPage from './pages/JournalPage/JournalPage';
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
@@ -23,7 +24,10 @@ const router = createBrowserRouter([
     path: "portal",
     element: <PortalPage />
   },
-
+  {
+    path: "journal",
+    element: <JournalPage />
+  }
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
