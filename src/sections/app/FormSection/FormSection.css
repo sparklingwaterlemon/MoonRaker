@@ -10,34 +10,3 @@
 
     /* outline: 1px dashed limegreen; */
 }
-.journal-link-container{
-    width: 200px;
-    height: 40px;
-        
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.journal-link{
-    width: inherit;
-    height: inherit;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    outline: 3px solid #374350;
-    border-radius: 5px;
-    color: #374350;;
-    font-size: 1.5em;
-    background: linear-gradient(45deg, #53abd0, #c0e8a2, #ffb54e);
-}
-.journal-link:visited{
-    color: #374350;
-}
-.journal-link:hover{
-    background: linear-gradient(90deg, #53abd0, #c0e8a2, #ffb54e);
-    outline: 3px solid dodgerblue;
-    color: black;
-}

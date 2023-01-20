@@ -11,7 +11,7 @@ import FormSection from '../../sections/app/FormSection/FormSection';
 import FlipDisplaySection from '../../sections/app/FlipDisplaySection/FlipDisplaySection';
 import SettingScrollFunc from '../../utilities/app/SettingScrollFunc/SettingScrollFunc';
 import SpikingScrollFunc from '../../utilities/app/SpikingScrollFunc/SpikingScrollFunc';
-import ConstructionDisplay from '../../utilities/app/ConstructionDisplay/ConstructionDisplay';
+// import ConstructionDisplay from '../../utilities/app/ConstructionDisplay/ConstructionDisplay';
 
 export default function App() {
   // indexForDate & currMoonPhase SET in "MoonComponents". Used in "FlipDisplayComponent" -to-> "ASideDatePhase"
@@ -22,24 +22,22 @@ export default function App() {
   // cityLocation & weatherAstroData SET in "SearchBarComponent". Used in "FlipDisplayComponet" -to-> "BSideWeatherAstro"
   const [cityLocation, setCityLocation] = useState("no city");
   const [weatherAstroData, setWeatherAstroData] = useState(false);
-  // user
-  const [astronaut, setAstronaut] = useState(null);
 
   // --- IF CHANGING PAGE HEIGHT , ALSO UPDATE SETTINGSCROLLFUN()!!
   
   return (
     <>
       <PreLoadImagesFunc />
-      <section id="section-moon">
+      <main id="main-moon">
         <BackgroundComponent />
-        <div className="leftside-moon">
+        <section className="leftside-moon">
           <MoonSection 
             setIndexForDate={setIndexForDate}
             setCurrMoonPhase={setCurrMoonPhase}/>
           <DuaLipa />
           <AboutLinkComponent />
-        </div>
-        <div className="rightside-moon">
+        </section> 
+        <section className="rightside-moon">
           <FormSection 
             setCityLocation={setCityLocation} 
             setWeatherAstroData={setWeatherAstroData} 
@@ -51,9 +49,9 @@ export default function App() {
             currMoonPhase={currMoonPhase} 
             cityLocation={cityLocation} 
             weatherAstroData={weatherAstroData}/>
-        </div>
-      </section>
-      <ConstructionDisplay />
+        </section>
+      </main>
+      {/* <ConstructionDisplay /> */}
       <SettingScrollFunc />
       <SpikingScrollFunc />
     </>

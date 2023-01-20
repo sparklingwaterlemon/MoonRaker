@@ -1,16 +1,12 @@
 import "./FormSection.css";
 import SearchBarComponent from "../../../components/app/SearchBarComponent/SearchBarComponent";
-import { Link } from "react-router-dom";
+import PortalLinkComponent from "../../../components/app/PortalLinkComponent/PortalLinkComponent";
 
 
 export default function FormSection({setCityLocation, setWeatherAstroData, setFlipAB}){
     return(
         <section id="form-section">
-            <div className="journal-link-container">
-                <Link to="about" className="journal-link">
-                    Journal Entry
-                </Link>
-            </div>
+            <PortalLinkComponent />
             <SearchBarComponent 
                 setCityLocation={setCityLocation} 
                 setWeatherAstroData={setWeatherAstroData} 

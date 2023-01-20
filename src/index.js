@@ -20,9 +20,10 @@ const router = createBrowserRouter([
     element: <AboutPage />
   },
   {
-    path: "cape-canaveral",
+    path: "portal",
     element: <PortalPage />
-  }
+  },
+
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
