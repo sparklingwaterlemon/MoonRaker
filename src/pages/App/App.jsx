@@ -13,7 +13,6 @@ import SettingScrollFunc from '../../utilities/app/SettingScrollFunc/SettingScro
 import SpikingScrollFunc from '../../utilities/app/SpikingScrollFunc/SpikingScrollFunc';
 import ConstructionDisplay from '../../utilities/app/ConstructionDisplay/ConstructionDisplay';
 
-
 export default function App() {
   // indexForDate & currMoonPhase SET in "MoonComponents". Used in "FlipDisplayComponent" -to-> "ASideDatePhase"
   const [indexForDate, setIndexForDate] = useState();
@@ -23,6 +22,8 @@ export default function App() {
   // cityLocation & weatherAstroData SET in "SearchBarComponent". Used in "FlipDisplayComponet" -to-> "BSideWeatherAstro"
   const [cityLocation, setCityLocation] = useState("no city");
   const [weatherAstroData, setWeatherAstroData] = useState(false);
+  // user
+  const [astronaut, setAstronaut] = useState(null);
 
   // --- IF CHANGING PAGE HEIGHT , ALSO UPDATE SETTINGSCROLLFUN()!!
   

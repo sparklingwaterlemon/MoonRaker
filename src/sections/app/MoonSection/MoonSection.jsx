@@ -62,7 +62,6 @@ export default function MoonSection({ setIndexForDate, setCurrMoonPhase }) {
     // This is for Safarai drawImage error - canvas loading without image
     useEffect(()=>{
         holderImg.onload = function(){
-            console.log("test leak");
             var cvs = canvasRef.current;
             var ctx = cvs.getContext('2d');
             cvs.width = 500;

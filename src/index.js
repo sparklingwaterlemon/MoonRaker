@@ -5,6 +5,7 @@ import './index.css';
 import App from './pages/App/App';
 import ErrorPage from './pages/ErrorPage/ErrorPage';
 import AboutPage from './pages/AboutPage/AboutPage';
+import PortalPage from './pages/PortalPage/PortalPage';
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
   {
     path: "about",
     element: <AboutPage />
+  },
+  {
+    path: "cape-canaveral",
+    element: <PortalPage />
   }
 ]);
 
