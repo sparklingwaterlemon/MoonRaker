@@ -34,9 +34,9 @@ export default function ConstructionDisplay() {
                     <span className="c-header">UNDER re-CONSTRUCTION</span>
                     <span className="c-update">LAST MODIFIED ON {text}</span>
 
-                    Update - created server.js
-                    <br/> .. npm i express, morgan, favicon, mongoose, connected to MongoDB
-                    <br/> .. set up development proxy express server port 3001
+                    Update - creating/ working on Sign Up/ Sign In Form
+                    <br/> .. previous project had class components, attempting to work 
+                    <br/> .. in purely functional components
                     <div className="c-links">
                         <a href="https://github.com/sparklingwaterlemon/The-Great-Gig-in-the-Sky" target="_blank" rel="noreferrer">github</a>
                         <button onClick={scrollDown}>Refresh Scroll</button>
