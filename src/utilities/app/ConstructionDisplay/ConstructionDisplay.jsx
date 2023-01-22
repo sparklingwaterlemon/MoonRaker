@@ -36,7 +36,7 @@ export default function ConstructionDisplay() {
 
                     Update - creating/ working on Sign Up/ Sign In Form
                     <br/> .. previous project had class components, attempting to work 
-                    <br/> .. in purely functional components
+                    <br/> .. in purely functional components // 9/29-3
                     <div className="c-links">
                         <a href="https://github.com/sparklingwaterlemon/The-Great-Gig-in-the-Sky" target="_blank" rel="noreferrer">github</a>
                         <button onClick={scrollDown}>Refresh Scroll</button>
