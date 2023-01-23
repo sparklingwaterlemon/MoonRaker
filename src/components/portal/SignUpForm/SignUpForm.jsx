@@ -22,11 +22,13 @@ export default function SignUpForm() {
       delete userInfo.error;
 
 
-      const user = await signUp("test");
+      const user = await signUp(formData);
+      console.log("<- SignUpForm \\ users-service.js ")
       console.log("user", user);
 
-    } catch {      
-      setUserInfo({ ...userInfo, error: "Sign Up Failed - Try Again" });
+    } catch(e) {      
+      console.error("SignUpForm.jsx ", e);
+      setUserInfo({ ...userInfo, error: e.message});
     }
     alert(JSON.stringify(userInfo))
   };
