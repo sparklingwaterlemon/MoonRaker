@@ -14,6 +14,7 @@ export default function SignUpForm() {
     
     const handleSignUpFormSubmit = function(evt){
         evt.preventDefault();
+        alert(JSON.stringify(userInfo));
     };
     const handlSignUpFormChange = (evt) =>{
         setUserInfo({...userInfo, [evt.target.name]: evt.target.value});
@@ -22,8 +23,8 @@ export default function SignUpForm() {
 
     return (
       <>
-        <div className="sign-up-form-container">
-          <form autoComplete="off" onSubmit={handleSignUpFormSubmit}>
+        <div className="signup-form-container">
+          <form autoComplete="off" className="signup-form" onSubmit={handleSignUpFormSubmit}>
             <label className="signup-label">Name</label>
             <input className="signup-input" type="text" name="name" onChange={handlSignUpFormChange} required />
             <br />
@@ -36,7 +37,7 @@ export default function SignUpForm() {
             <label className="signup-label">Confirm</label>
             <input className="signup-input" type="password" name="confirm" onChange={handlSignUpFormChange} required />
             <br />
-            <button className="signup-btn" type="submit" disabled={disable}>SIGN UP</button>
+            <button className="signup-button" type="submit" disabled={disable}>SIGN UP</button>
           </form>
         </div>
         <p className="error-message">&nbsp;{userInfo.error}</p>
