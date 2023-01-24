@@ -37,7 +37,7 @@ export default function ConstructionDisplay() {
                     Update - Stubbed up Server Side routing for signing up.
                     <br/> Made AJAX requests to server. Updating state using JSON data returned from server. 
                     <br/> Mock up of create controller action...
-                    <br/> Network tab of Chrome DevTools.. 
+                    <br/> UPDATE - TOMORROW WORK ON HEROKU HTTP SERVER ROUTING
                     <div className="c-links">
                         <a href="https://github.com/sparklingwaterlemon/The-Great-Gig-in-the-Sky" target="_blank" rel="noreferrer">github</a>
                         <button onClick={scrollDown}>Refresh Scroll</button>
