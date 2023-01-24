@@ -32,11 +32,12 @@ export default function ConstructionDisplay() {
                 <div className="c-signpost">
 
                     <span className="c-header">UNDER re-CONSTRUCTION</span>
-                    <span className="c-update">LAST MODIFIED ON {text}</span>
+                    <span className="c-update">LAST MODIFIED ON {text}</span> 
 
-                    Update - creating/ working on Sign Up/ Sign In Form
-                    <br/> .. previous project had class components, attempting to work 
-                    <br/> .. in purely functional components // 9/29-3
+                    Update - Stubbed up Server Side routing for signing up.
+                    <br/> Made AJAX requests to server. Updating state using JSON data returned from server. 
+                    <br/> Mock up of create controller action...
+                    <br/> Network tab of Chrome DevTools.. 
                     <div className="c-links">
                         <a href="https://github.com/sparklingwaterlemon/The-Great-Gig-in-the-Sky" target="_blank" rel="noreferrer">github</a>
                         <button onClick={scrollDown}>Refresh Scroll</button>
