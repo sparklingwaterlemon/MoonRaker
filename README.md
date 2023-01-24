@@ -2,6 +2,12 @@ notetoself: ((930-4))
 SCROLL TO TODAY ARROWS NEXT TO SEARCH
 SCROLL TO BOTTOM ARROWS NEXT TO SEARCH
 
+`https://devcenter.heroku.com/articles/http-routing`
+`https://www.freecodecamp.org/news/deploying-a-mern-application-using-mongodb-atlas-to-heroku/`
+- need to specify proxy location
+- need to add node engine
+- need to update scripts start to npm start && nodemon server.js
+
 
 
 # Getting Started with Create React App
