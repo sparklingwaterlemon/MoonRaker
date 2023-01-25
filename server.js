@@ -1,3 +1,4 @@
+
 const express = require("express");
 const path = require("path");
 const favicon = require("serve-favicon");
@@ -23,9 +24,9 @@ app.get('/*', function(req,res){
 });
 
 
-const PORT = process.env.PORT || 3001;
+const port = process.env.PORT || 3001;
 
 
 app.listen(port, function(){
-    console.log(`Express app running on port ${PORT}`)
+    console.log(`Express app running on port ${port}`)
 });
