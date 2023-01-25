@@ -1,8 +1,12 @@
+
+
 const BASE_URL = "/api/users";
+
+
+
 
 export async function signUp(userData){
     console.log("curr @ user-api.js signUp ->")
-    // console.log("user-api.js signUp", JSON.stringify(userData));
 
     const res = await fetch(BASE_URL, {
         method: 'POST',

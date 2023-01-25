@@ -7,6 +7,7 @@ SCROLL TO BOTTOM ARROWS NEXT TO SEARCH
 - need to specify proxy location
 - need to add node engine
 - need to update scripts start to npm start && nodemon server.js
+- `"server": "nodemon index.js --ignore client",` for development
 
 ### efficiency
 - would it be more efficient to preload the images into an object and the algo can reference the object/array indices?
