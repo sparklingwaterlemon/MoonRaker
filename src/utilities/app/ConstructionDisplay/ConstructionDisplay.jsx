@@ -34,10 +34,10 @@ export default function ConstructionDisplay() {
                     <span className="c-header">UNDER re-CONSTRUCTION</span>
                     <span className="c-update">LAST MODIFIED ON {text}</span> 
 
-                    Update - Stubbed up Server Side routing for signing up.
-                    <br/> Made AJAX requests to server. Updating state using JSON data returned from server. 
-                    <br/> Mock up of create controller action...
-                    <br/> UPDATE - TOMORROW WORK ON HEROKU HTTP SERVER ROUTING
+                    Update - Created Token for JWT-based Authentication
+                    <br/> npm i, created jsonwebtoken. salted (bcrypt) and hashed
+                    <br/> FIXED - Heroku server routing
+                    <br/> console.log in Portal Page to see JWT being returned
                     <div className="c-links">
                         <a href="https://github.com/sparklingwaterlemon/The-Great-Gig-in-the-Sky" target="_blank" rel="noreferrer">github</a>
                         <button onClick={scrollDown}>Refresh Scroll</button>
