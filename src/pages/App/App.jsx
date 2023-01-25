@@ -11,7 +11,7 @@ import FormSection from '../../sections/app/FormSection/FormSection';
 import FlipDisplaySection from '../../sections/app/FlipDisplaySection/FlipDisplaySection';
 import SettingScrollFunc from '../../utilities/app/SettingScrollFunc/SettingScrollFunc';
 import SpikingScrollFunc from '../../utilities/app/SpikingScrollFunc/SpikingScrollFunc';
-import ConstructionDisplay from '../../utilities/app/ConstructionDisplay/ConstructionDisplay';
+// import ConstructionDisplay from '../../utilities/app/ConstructionDisplay/ConstructionDisplay';
 
 export default function App() {
   // indexForDate & currMoonPhase SET in "MoonComponents". Used in "FlipDisplayComponent" -to-> "ASideDatePhase"
@@ -51,7 +51,7 @@ export default function App() {
             weatherAstroData={weatherAstroData}/>
         </section>
       </main>
-      <ConstructionDisplay />
+      {/* <ConstructionDisplay /> */}
       <SettingScrollFunc />
       <SpikingScrollFunc />
     </>
