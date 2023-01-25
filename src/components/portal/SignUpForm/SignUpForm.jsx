@@ -38,6 +38,7 @@ export default function SignUpForm() {
     setUserData({ ...userData, [evt.target.name]: evt.target.value });
   };
 
+
   return (
     <>
       <div className="signup-form-container">

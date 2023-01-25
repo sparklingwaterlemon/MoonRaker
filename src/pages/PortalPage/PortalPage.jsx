@@ -4,11 +4,11 @@ import JournalPage from "../JournalPage/JournalPage";
 import AuthPage from "../AuthPage/AuthPage";
 
 export default function PortalPage() {
-    const [astronaut, setAstronaut] = useState(null);
+    const [user, setUser] = useState(null);
 
     return (
         <main id="portal-page">
-            {astronaut !== null ?
+            {user !== null ?
                 <JournalPage />
                 :
                 <AuthPage />

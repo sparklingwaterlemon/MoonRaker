@@ -8,6 +8,9 @@ SCROLL TO BOTTOM ARROWS NEXT TO SEARCH
 - need to add node engine
 - need to update scripts start to npm start && nodemon server.js
 
+### efficiency
+- would it be more efficient to preload the images into an object and the algo can reference the object/array indices?
+
 
 
 # Getting Started with Create React App
