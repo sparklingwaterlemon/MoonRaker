@@ -26,9 +26,9 @@ export default function ConstructionDisplay() {
 
 
     return (
-        <div className={hideCSign ? "construction-container hide" : "construction-container"}>
+        <div className={hideCSign ? "c-coin-hide" : "c-coin"}>
             <button className="hide-c-button" onClick={() => setHideCSign(true)}> HIDE </button>
-            <div className="caution-border">
+            <div className="c-border">
                 <div className="c-signpost">
 
                     <span className="c-header">UNDER re-CONSTRUCTION</span>

@@ -26,3 +26,116 @@
   flex-direction: column;
   justify-content: center;
 }
+
+.c-coin{
+  position: absolute;
+  top: 1750px;
+  height: auto;
+  width: auto;
+  left: 50%;
+  transform: translate(-50%);
+  -webkit-transform: translate(-50%);
+  z-index: 3;
+}
+
+.c-coin-hide {
+  display: none;
+}
+
+.hide-c-button {
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  top: -25px;
+  left: -50px;
+  font-size: 1.5em;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.c-border {
+  --signpost-height: 250px;
+  width: 800px;
+  height: calc(var(--signpost-height) + 25px);
+  background: linear-gradient(-45deg,
+          black 0% 5%,
+          yellow 5% 10%,
+          black 10% 15%,
+          yellow 15% 20%,
+          black 20% 25%,
+          yellow 25% 30%,
+          black 30% 35%,
+          yellow 35% 40%,
+          black 40% 45%,
+          yellow 45% 50%,
+          black 50% 55%,
+          yellow 55% 60%,
+          black 60% 65%,
+          yellow 65% 70%,
+          black 70% 75%,
+          yellow 75% 80%,
+          black 80% 85%,
+          yellow 85% 90%,
+          black 90% 95%,
+          yellow 95% 100%);
+  box-shadow: 40px 20px 40px rgb(219, 216, 140);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: 2px solid black;
+}
+
+.c-signpost {
+  height: var(--signpost-height);
+  width: 775px;
+  outline: 2px solid black;
+  background-color: yellow;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.c-links {
+  width: inherit;
+  height: 40px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.c-signpost button {
+  padding: 0px 15px;
+  font-size: 1em;
+  color: white;
+  background-color: gray;
+}
+
+.c-signpost a {
+  font-size: 1.1em;
+  padding: 0px 15px;
+  color: dodgerblue;
+}
+
+.c-signpost a:hover {
+  color: black;
+  border: 1px solid black;
+}
+
+.c-signpost button:hover {
+  background-color: black;
+  cursor: pointer;
+}
+
+.c-signpost a:visited {
+  color: dodgerblue;
+}
+
+.c-header {
+  font-size: 3em;
+}
+
+.c-update {
+  font-size: 1.5em;
+}
