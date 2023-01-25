@@ -2,8 +2,6 @@ import "./BSideWeatherAstro.css";
 
 
 export default function BSideWeatherAstro({ cityLocation, data }) {
-    console.log("5");
-
     const unixToDateTimeConverter = (unix) => {
         var currDT = new Date(unix * 1000).toLocaleString();
         return currDT

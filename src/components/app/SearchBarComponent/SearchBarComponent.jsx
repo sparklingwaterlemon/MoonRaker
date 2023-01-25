@@ -6,16 +6,15 @@ import { useState, useEffect } from "react";
 // goFetch variable used to prevent useEffect from fetchingAstroData prematurely
 // goFetch === true, once COORDINATES are fetched
 let goFetch = false;
-                        
 
-export default function SearchBarComponent({setCityLocation,setWeatherAstroData, setFlipAB}){
+
+export default function SearchBarComponent({ setCityLocation, setWeatherAstroData, setFlipAB }) {
     const [zipcode, setZipcode] = useState("");
     const [lat, setLat] = useState();
     const [lon, setLon] = useState();
 
-    let COORDINATES=`https://api.openweathermap.org/geo/1.0/zip?zip=${zipcode}&appid=${process.env.REACT_APP_OWM}`;
-    let OPENWEATHERMAP=`https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&exclude=hourly,minutely&units=imperial&appid=${process.env.REACT_APP_OWM}`;
-
+    let COORDINATES = `https://api.openweathermap.org/geo/1.0/zip?zip=${zipcode}&appid=${process.env.REACT_APP_OWM}`;
+    let OPENWEATHERMAP = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&exclude=hourly,minutely&units=imperial&appid=${process.env.REACT_APP_OWM}`;
 
     // -- step 4 --> step 5 is "BSideWeatherAstro". passing setWeatherAstroData -> "BSideWeatherAstro"
     const fetchWeatherAstroData = async() => {
@@ -45,7 +44,6 @@ export default function SearchBarComponent({setCityLocation,setWeatherAstroData,
             await fetch(COORDINATES)
             .then(res => res.json())
             .then(data => {
-                console.log("1");
                 setCityLocation(data.name);
                 setLat(data.lat);
                 setLon(data.lon);
@@ -64,18 +62,19 @@ export default function SearchBarComponent({setCityLocation,setWeatherAstroData,
         setZipcode("");
     };
 
-    const handleFormInput = (evt) =>{
+    const handleFormInput = (evt) => {
         setZipcode(evt.target.value);
     };
 
-    return(
+
+    return (
         <div className="zip-search-container">
             <form onSubmit={handleFormSubmit} autoComplete="off">
-                <input className="zip-search-input" 
-                    type="text" 
-                    placeholder="enter zip only" 
-                    value={zipcode} 
-                    onChange={handleFormInput} 
+                <input className="zip-search-input"
+                    type="text"
+                    placeholder="enter zip only"
+                    value={zipcode}
+                    onChange={handleFormInput}
                     required />
             </form>
         </div>

@@ -2,7 +2,6 @@ import "./SignUpForm.css";
 import { useState } from "react";
 import { signUp } from "../../../utilities/portal/users-service";
 
-
 export default function SignUpForm() {
   const [userData, setUserData] = useState({
     name: "",
@@ -33,11 +32,9 @@ export default function SignUpForm() {
   };
 
 
-
   const handlSignUpFormChange = (evt) => {
     setUserData({ ...userData, [evt.target.name]: evt.target.value });
   };
-
 
   return (
     <>
