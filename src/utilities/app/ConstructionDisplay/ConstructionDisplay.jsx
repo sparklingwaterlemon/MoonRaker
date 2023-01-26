@@ -34,10 +34,8 @@ export default function ConstructionDisplay() {
                     <span className="c-header">UNDER re-CONSTRUCTION</span>
                     <span className="c-update">LAST MODIFIED ON {text}</span> 
 
-                    Update - Created Token for JWT-based Authentication
-                    <br/> npm i, created jsonwebtoken. salted (bcrypt) and hashed
-                    <br/> FIXED - Heroku server routing
-                    <br/> console.log in Portal Page to see JWT being returned
+                    Update - Created Sign in function with JWT - functional
+
                     <div className="c-links">
                         <a href="https://github.com/sparklingwaterlemon/The-Great-Gig-in-the-Sky" target="_blank" rel="noreferrer">github</a>
                         <button onClick={scrollDown}>Refresh Scroll</button>
