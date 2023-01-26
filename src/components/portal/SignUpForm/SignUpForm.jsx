@@ -2,7 +2,7 @@ import "./SignUpForm.css";
 import { useState } from "react";
 import { signUp } from "../../../utilities/portal/users-service";
 
-export default function SignUpForm() {
+export default function SignUpForm({setUser}) {
   const [userData, setUserData] = useState({
     name: "",
     email: "",
@@ -23,7 +23,7 @@ export default function SignUpForm() {
 
       const user = await signUp(formData);
       console.log("<- curr @ SignUpForm \\ users-service.js ")
-      console.log("user", user);
+      setUser(user);
 
     } catch(e) {      
       console.error("SignUpForm.jsx ", e);
