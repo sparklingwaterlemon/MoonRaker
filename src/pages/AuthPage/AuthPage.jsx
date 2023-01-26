@@ -1,18 +1,22 @@
 import "./AuthPage.css";
 import SignUpForm from "../../components/portal/SignUpForm/SignUpForm";
+import SignInForm from "../../components/portal/SignInForm/SignInForm";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 export default function AuthPage({setUser}) {
+    const [showSignIn, setShowSignIn] = useState(false);
+
     return (
         <div className="auth-page">
+            {showSignIn ? 
+                <SignInForm />
+                :
+                <SignUpForm setUser={setUser} showSignIn={showSignIn} setShowSignIn={setShowSignIn}/>
+            }
             <Link to="/">
-                <button className="about-back-button">Back</button>
+                <button className="auth-back-button">Go Back</button>
             </Link>
-            <h1> AUTH PAGE </h1>
-            <br />
-            <h3> SIGN UP</h3>
-            <SignUpForm setUser={setUser}/>
-            <h3> SIGN IN</h3>
         </div>
     )
 }

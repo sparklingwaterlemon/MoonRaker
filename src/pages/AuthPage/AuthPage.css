@@ -1,3 +1,20 @@
 .auth-page{
-    margin-top: 20px;
+    background-color: whitesmoke;
+    height: 100vh;
+    min-height: 500px;
+    width: 100vw;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.auth-back-button{
+    margin-top: 10px;
+    width: 200px;
+    padding: 7px;
+    cursor: pointer;
+    background-color: slategray;
+    border-style: none;
+    color: whitesmoke;
 }

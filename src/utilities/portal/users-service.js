@@ -2,9 +2,9 @@ import * as usersAPI from "./users-api";
 
 export async function signUp(userData){
     try{
-        console.log("curr @ user-service.js signUp -> ");
+        // console.log("curr @ user-service.js signUp -> ");
         const token = await usersAPI.signUp(userData)
-        console.log("<- curr @ user-service.js \\ user-api.js")
+        // console.log("<- curr @ user-service.js \\ user-api.js")
         localStorage.setItem('token', token);
         return getUser();
     } catch{
