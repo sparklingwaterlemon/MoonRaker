@@ -59,7 +59,7 @@ export default function SignUpForm({ setUser , showSignIn, setShowSignIn }) {
         </form>
         <span className="sign-in-notice">already have an account? <a id="change-sign-in" onClick={()=>{setShowSignIn(!showSignIn)}}>Sign In</a></span>
       </div>
-      <p className="error-message">&nbsp;{userData.error}</p>
+      <p className="error-message">{userData.error}</p>
     </>
   )
 };

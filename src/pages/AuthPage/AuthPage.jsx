@@ -10,7 +10,7 @@ export default function AuthPage({setUser}) {
     return (
         <div className="auth-page">
             {showSignIn ? 
-                <SignInForm />
+                <SignInForm showSignIn={showSignIn} setShowSignIn={setShowSignIn}/>
                 :
                 <SignUpForm setUser={setUser} showSignIn={showSignIn} setShowSignIn={setShowSignIn}/>
             }

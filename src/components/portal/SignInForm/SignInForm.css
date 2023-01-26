@@ -1,0 +1,49 @@
+.signin-form-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid slategray;
+
+    padding-top: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 25px;
+}
+.signin-form-container h1{
+    margin-bottom: 5px;
+    color: dodgerblue;
+    font-weight: 400;
+}
+
+
+.signin-form{
+    display: grid;
+    width: auto;
+    height: auto;
+    padding: 20px;
+
+    grid-template-columns: 100px 300px;
+}
+
+.signin-label{
+    grid-column: 1;
+    display: flex;
+    align-items: center;
+}
+.signin-input{
+    grid-column: 2;
+    padding: 5px;
+}
+.signin-button{
+    grid-column: 1 / span 2;
+    margin-top: 10px;
+    cursor: pointer;
+    padding: 1vmin;
+}
+
+#change-signup{
+    text-decoration: underline;
+    cursor: pointer;
+    color: dodgerblue;
+}
