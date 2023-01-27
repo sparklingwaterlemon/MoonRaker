@@ -35,6 +35,8 @@ export default function ConstructionDisplay() {
                     <span className="c-update">LAST MODIFIED ON {text}</span> 
 
                     Update - Created Sign In && Log Out functionality!
+                    <br/>
+                    <h4>Website is best experienced through the Chrome Browser</h4>
 
                     <div className="c-links">
                         <a href="https://github.com/sparklingwaterlemon/The-Great-Gig-in-the-Sky" target="_blank" rel="noreferrer">github</a>
