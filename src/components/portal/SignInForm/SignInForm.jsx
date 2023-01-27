@@ -14,7 +14,6 @@ export default function SignInForm({ setUser, showSignIn, setShowSignIn }){
         try{
             const user = await login(credentials);
             setUser(user);
-            console.log(user);
         } catch(e) {
             setError(e.message);
         }

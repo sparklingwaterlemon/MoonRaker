@@ -5,7 +5,7 @@ export default function PortalLinkComponent() {
     return (
         <div className="portal-link-container">
             <Link to="portal" className="portal-link">
-                Portal
+                Journal
             </Link>
         </div>
     )

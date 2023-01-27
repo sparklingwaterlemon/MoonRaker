@@ -39,3 +39,7 @@ export async function login(cred){
     localStorage.setItem('token', token)
     return getUser();
 };
+
+export async function logOut(){
+    localStorage.removeItem('token');
+};
