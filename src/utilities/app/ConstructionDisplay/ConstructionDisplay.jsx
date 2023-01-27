@@ -34,7 +34,7 @@ export default function ConstructionDisplay() {
                     <span className="c-header">UNDER re-CONSTRUCTION</span>
                     <span className="c-update">LAST MODIFIED ON {text}</span> 
 
-                    Update - Created Sign in function with JWT - functional
+                    Update - Created Sign In && Log Out functionality!
 
                     <div className="c-links">
                         <a href="https://github.com/sparklingwaterlemon/The-Great-Gig-in-the-Sky" target="_blank" rel="noreferrer">github</a>
