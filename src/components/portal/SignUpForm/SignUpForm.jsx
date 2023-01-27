@@ -1,7 +1,7 @@
 import "./SignUpForm.css";
 import { useState } from "react";
 import { signUp } from "../../../utilities/portal/users-service";
-import { Link } from "react-router-dom";
+
 
 export default function SignUpForm({ setUser , showSignIn, setShowSignIn }) {
   const [userData, setUserData] = useState({
@@ -57,7 +57,7 @@ export default function SignUpForm({ setUser , showSignIn, setShowSignIn }) {
           <br />
           <button className="signup-button" type="submit" disabled={disable}>SIGN UP</button>
         </form>
-        <span className="sign-in-notice">already have an account? <a id="change-sign-in" onClick={()=>{setShowSignIn(!showSignIn)}}>Sign In</a></span>
+        <span className="sign-in-notice">already have an account? <button id="change-sign-in" onClick={()=>{setShowSignIn(!showSignIn)}}>Sign In</button></span>
       </div>
       <p className="error-message">{userData.error}</p>
     </>

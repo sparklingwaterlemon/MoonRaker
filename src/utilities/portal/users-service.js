@@ -12,7 +12,6 @@ export async function signUp(userData){
     };
 };
 
-
 export function getToken(){
     const token = localStorage.getItem('token');
 
@@ -30,5 +29,14 @@ export function getToken(){
 // separating retreiving token vs passing along user
 export function getUser(){
     const token = getToken();
+    // if token is valid
     return token ? JSON.parse(atob(token.split(".")[1])).user : null;
+};
+
+
+export async function login(cred){
+    console.log("@ user-service.js -> user-api.js")
+    const token = await usersAPI.login(cred);
+    console.log("<- @ SignInForm \\ users-service.js ")
+    return token
 };

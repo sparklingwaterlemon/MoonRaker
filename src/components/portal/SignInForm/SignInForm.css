@@ -43,7 +43,11 @@
 }
 
 #change-signup{
-    text-decoration: underline;
-    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    display: inline-block;
     color: dodgerblue;
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 1em;
 }
