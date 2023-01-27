@@ -1,5 +1,6 @@
 const User = require('../../models/user');
 const jwt = require('jsonwebtoken');
+const bcrypt = require("bcrypt");
 
 async function create(req,res){
     try{
@@ -26,7 +27,7 @@ async function login(req,res){
         if(!match) throw new Error();
         
         const token = createJWT(user);
-        console.log("token", token);
+        res.json(token);
         
     } catch(err) {
         console.log(err.stack);

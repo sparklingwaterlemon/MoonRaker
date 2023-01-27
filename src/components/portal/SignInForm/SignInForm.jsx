@@ -2,7 +2,7 @@ import "./SignInForm.css";
 import { useState } from "react";
 import { login } from "../../../utilities/portal/users-service";
 
-export default function SignInForm({showSignIn,setShowSignIn }){
+export default function SignInForm({ setUser, showSignIn, setShowSignIn }){
     const [credentials, setCredentials] = useState({
         email: "",
         password: "",
@@ -12,10 +12,9 @@ export default function SignInForm({showSignIn,setShowSignIn }){
     const handleSignInFormSubmit = async(evt) => {
         evt.preventDefault();
         try{
-            console.log("@ SignInForm -> user.service.js")
             const user = await login(credentials);
-            console.log("@ SignInForm <- users-service.js ")
-            console.log("user", user);
+            setUser(user);
+            console.log(user);
         } catch(e) {
             setError(e.message);
         }
@@ -23,7 +22,6 @@ export default function SignInForm({showSignIn,setShowSignIn }){
 
     const handleSignInFormChange = (evt) =>{ 
         setCredentials({...credentials, [evt.target.name]: evt.target.value})
-        console.log(credentials);
     };
 
     return(

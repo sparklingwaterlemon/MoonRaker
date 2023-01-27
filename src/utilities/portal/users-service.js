@@ -35,8 +35,7 @@ export function getUser(){
 
 
 export async function login(cred){
-    console.log("@ user-service.js -> user-api.js")
     const token = await usersAPI.login(cred);
-    console.log("<- @ SignInForm \\ users-service.js ")
-    return token
+    localStorage.setItem('token', token)
+    return getUser();
 };

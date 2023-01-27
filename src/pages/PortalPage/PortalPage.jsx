@@ -9,7 +9,7 @@ export default function PortalPage() {
     return (
         <main id="portal-page">
             {user !== null ?
-                <JournalPage />
+                <JournalPage setUser={setUser}/>
                 :
                 <AuthPage setUser={setUser}/>
             }
