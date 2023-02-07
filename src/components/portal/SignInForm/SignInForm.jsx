@@ -14,8 +14,8 @@ export default function SignInForm({ setUser, showSignIn, setShowSignIn }){
         try{
             const user = await login(credentials);
             setUser(user);
-        } catch(e) {
-            setError(e.message);
+        } catch(err) {
+            setError(err.message);
         }
     };
 
@@ -25,7 +25,7 @@ export default function SignInForm({ setUser, showSignIn, setShowSignIn }){
 
     return(
         <div className="signin-form-container">
-            <h1> LOG IN </h1>
+            {error ? <h1 className="error-message"> {error} </h1> : <h1 className="banner"> LOG IN</h1> }
             <form className="signin-form" autoComplete="off" onSubmit={handleSignInFormSubmit}>
                 <label className="signin-label">Email</label>
                 <input className="signin-input" 
@@ -48,7 +48,6 @@ export default function SignInForm({ setUser, showSignIn, setShowSignIn }){
 
             </form>
             <span className="signup-notice">don't have an account? <button id="change-signup" onClick={()=>{setShowSignIn(!showSignIn)}}>Sign Up</button></span>
-            <p className="error-message">{error}</p>
         </div>
     )
 }

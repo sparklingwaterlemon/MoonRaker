@@ -10,6 +10,8 @@ export async function signUp(userData){
     };
 };
 
+
+
 export function getToken(){
     const token = localStorage.getItem('token');
 
@@ -33,10 +35,16 @@ export function getUser(){
 
 
 export async function login(cred){
-    const token = await usersAPI.login(cred);
-    localStorage.setItem('token', token)
-    return getUser();
+    try{
+        const token = await usersAPI.login(cred);
+        localStorage.setItem('token', token)
+        return getUser();
+    } catch(err){
+        throw new Error(err.message);
+    };
 };
+
+
 
 export async function logOut(){
     localStorage.removeItem('token');

@@ -10,9 +10,14 @@
     padding-right: 50px;
     padding-bottom: 25px;
 }
-.signin-form-container h1{
+.banner{
     margin-bottom: 5px;
     color: dodgerblue;
+    font-weight: 400;
+}
+.error-message{
+    margin-bottom: 5px;
+    color: red;
     font-weight: 400;
 }
 

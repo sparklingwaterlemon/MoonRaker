@@ -18,8 +18,6 @@ export async function signUp(userData){
 };
 
 
-
-
 export async function login(cred){
     const res = await fetch(`${BASE_URL}/login`, {
         method: 'POST', 
@@ -30,6 +28,6 @@ export async function login(cred){
     if (res.ok){
         return res.json();
     } else{
-        throw new Error("users-api.js - Invalid Sign In");
+        throw new Error("Error Logging In");
     }
 };

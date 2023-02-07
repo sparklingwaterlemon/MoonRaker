@@ -30,7 +30,7 @@ async function login(req,res){
         res.json(token);
         
     } catch(err) {
-        console.log(err.stack);
+        res.status(400).json(err);
     }
 }
 
