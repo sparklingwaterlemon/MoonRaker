@@ -2,13 +2,11 @@ import * as usersAPI from "./users-api";
 
 export async function signUp(userData){
     try{
-        // console.log("curr @ user-service.js signUp -> ");
         const token = await usersAPI.signUp(userData)
-        // console.log("<- curr @ user-service.js \\ user-api.js")
         localStorage.setItem('token', token);
         return getUser();
-    } catch{
-        throw new Error("user-service.js - Invalid Sign Up")
+    } catch(err){
+        throw new Error(err.message);
     };
 };
 

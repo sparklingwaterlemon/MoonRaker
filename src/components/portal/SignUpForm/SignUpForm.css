@@ -9,10 +9,15 @@
     padding-right: 50px;
     padding-bottom: 25px;
 }
-.signup-form-container h1{
-    margin-bottom: 5px;
+.banner{
     color: dodgerblue;
     font-weight: 400;
+    margin-bottom: 5px;
+}
+.error-message{
+    color: red;
+    font-weight: 400;
+    margin-bottom: 5px;
 }
 
 .signup-form{
@@ -48,3 +53,4 @@
     text-decoration: underline;
     font-size: 1em;
 }
+

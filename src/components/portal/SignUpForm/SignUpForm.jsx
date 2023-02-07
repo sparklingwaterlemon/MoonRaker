@@ -23,12 +23,10 @@ export default function SignUpForm({ setUser , showSignIn, setShowSignIn }) {
       delete formData.error;
 
       const user = await signUp(formData);
-      // console.log("<- curr @ SignUpForm \\ users-service.js ")
       setUser(user);
 
-    } catch (e) {
-      console.error("SignUpForm.jsx ", e);
-      setUserData({ ...userData, error: e.message });
+    } catch(err) {
+      setUserData({ ...userData, error: err.message });
     }
   };
 
@@ -41,7 +39,8 @@ export default function SignUpForm({ setUser , showSignIn, setShowSignIn }) {
     <>
       <br />
       <div className="signup-form-container">
-        <h1> SIGN UP </h1>
+        {userData.error ? <h1 className="error-message">{userData.error}</h1> :
+        <h1 className="banner"> SIGN UP </h1> }
         <form autoComplete="off" className="signup-form" onSubmit={handleSignUpFormSubmit}>
           <label className="signup-label">Name</label>
           <input className="signup-input" type="text" name="name" onChange={handlSignUpFormChange} required />
@@ -59,7 +58,6 @@ export default function SignUpForm({ setUser , showSignIn, setShowSignIn }) {
         </form>
         <span className="sign-in-notice">already have an account? <button id="change-sign-in" onClick={()=>{setShowSignIn(!showSignIn)}}>Sign In</button></span>
       </div>
-      <p className="error-message">{userData.error}</p>
     </>
   )
 };
