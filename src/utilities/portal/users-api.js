@@ -1,3 +1,5 @@
+import * as usersService from "./users-service";
+
 const BASE_URL = "/api/users";
 
 export async function signUp(userData){
@@ -19,15 +21,33 @@ export async function signUp(userData){
 
 
 export async function login(cred){
-    const res = await fetch(`${BASE_URL}/login`, {
-        method: 'POST', 
-        headers: { 'Content-Type': 'application/json' }, 
-        body: JSON.stringify(cred)
-    });
+    return sendRequest(`${BASE_URL}/login`, "POST", cred);
+};
 
-    if (res.ok){
-        return res.json();
-    } else{
-        throw new Error("Error Logging In");
-    }
+
+// helper function to keep things DRY //
+export async function sendRequest(url, method="GET", payload=null){
+    const options = { method };
+    if(payload){
+        options.headers = { "Content-Type" : "application/json" };
+        options.body = JSON.stringify(payload);
+    };
+
+    const token = usersService.getToken();
+    if(token){
+        // ensuring header object exists
+        options.headers = options.headers || {};
+        // Adding token to an Authorization header
+        // Prefacing with 'Bearer' is recommened in the HTTP specification
+        options.headers.Authorization = `Bearer ${token}`;
+    };
+ 
+    const res = await fetch(url, options);
+    if(res.ok) return res.json();
+    throw new Error("Bad Request");
+};
+
+
+export async function checkToken(){
+    await sendRequest(`${BASE_URL}`, "GET", "testing");
 };

@@ -48,7 +48,6 @@ export async function logOut() {
 };
 
 
-export async function checkToken(){
-    const token = getToken();
-    return token ? JSON.parse(atob(token.split(".")[1])).exp : null;
+export function checkToken(){
+    return usersAPI.checkToken();
 }
