@@ -49,5 +49,6 @@ export async function logOut() {
 
 
 export function checkToken(){
-    return usersAPI.checkToken();
+    return usersAPI.checkToken()
+    .then(dateStr => new Date(dateStr));
 }

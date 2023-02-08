@@ -4,7 +4,8 @@ import * as usersService from "../../utilities/portal/users-service";
 
 export default function JournalPage({ setUser }){
     async function handleCheckToken(){
-        usersService.checkToken();
+        const expDate = await usersService.checkToken();
+        console.log(expDate);
     };
 
 

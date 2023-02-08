@@ -42,12 +42,14 @@ export async function sendRequest(url, method="GET", payload=null){
         options.headers.Authorization = `Bearer ${token}`;
     };
  
+    console.log("helper function options", options);
+
     const res = await fetch(url, options);
     if(res.ok) return res.json();
     throw new Error("Bad Request");
 };
 
 
-export async function checkToken(){
-    await sendRequest(`${BASE_URL}`, "GET", "testing");
+export function checkToken(){
+    return sendRequest(`${BASE_URL}/check-token`);
 };
