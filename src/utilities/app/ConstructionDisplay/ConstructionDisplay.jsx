@@ -34,10 +34,10 @@ export default function ConstructionDisplay() {
                     <span className="c-header">UNDER re-CONSTRUCTION</span>
                     <span className="c-update">LAST MODIFIED ON {text}</span> 
 
-                    Update - Created Sign In && Log Out functionality!
+                    Update - Created Express Middleware to check token before being sent to a route handler.
                     <br/>
+
                     <h4>Website is best experienced through the Chrome Browser</h4>
-                    expected tbd - journal entry capabilities
 
                     <div className="c-links">
                         <a href="https://github.com/sparklingwaterlemon/The-Great-Gig-in-the-Sky" target="_blank" rel="noreferrer">github</a>
