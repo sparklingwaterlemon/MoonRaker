@@ -12,6 +12,10 @@ export default function JournalPage({ setUser }){
         console.log(expDate);
     };
 
+    function handleJSearch(evt){
+        evt.preventDefault();
+    }
+
 
     return(
         <>
@@ -23,7 +27,7 @@ export default function JournalPage({ setUser }){
             <div id="j-sidebar">
                 <h1> Journal Entries </h1>
                 <div>
-                    <form id="j-search-form" role="search">
+                    <form id="j-search-form" role="search" onSubmit={handleJSearch}>
                         <input
                             id="q" 
                             aria-label="Search entries"
@@ -50,14 +54,6 @@ export default function JournalPage({ setUser }){
                 </nav>
 
             </div>
-
-            <div id="detail">
-                <Outlet />
-            </div>
-
-
-
-
         </section>
         </>
     )
