@@ -33,7 +33,12 @@ import JournalEntry from "../../components/journal/JournalEntry";
 export default function JournalPage({ setUser }) {
     
     const [selectedEntry, setSelectedEntry] = useState(null);
-    const [newEntry, setNewEntry] = useState(false);
+
+    const [toggleToNewEntry, setToggleToNewEntry] = useState(false);
+    // useEffect(()=>{
+    //    setSelectedEntry(selectedEntry);
+    // },[selectedEntry]);
+
 
 
 
@@ -45,12 +50,11 @@ export default function JournalPage({ setUser }) {
         <>
             <main id="journal-page">
                 <PortalNavBar setUser={setUser} />
-                <SideBar newEntry={newEntry} setNewEntry={setNewEntry} setSelectedEntry={setSelectedEntry}/>
-                {newEntry ?
+                <SideBar toggleToNewEntry={toggleToNewEntry} setToggleToNewEntry={setToggleToNewEntry} selectedEntry={selectedEntry} setSelectedEntry={setSelectedEntry}/>
+                {toggleToNewEntry ?
                     <NewEntry />
                     :
-                    false
-                    // <JournalEntry entry={selectedEntry} />
+                    <JournalEntry selectedEntry={selectedEntry} />
                 }
             </main>
         </>

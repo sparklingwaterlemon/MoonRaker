@@ -34,9 +34,9 @@ export default function ConstructionDisplay() {
                     <span className="c-header">UNDER re-CONSTRUCTION</span>
                     <span className="c-update">LAST MODIFIED ON {text}</span> 
 
-                    Update - Created Express Middleware to check token before being sent to a route handler.
+                    Update - Basic - able to Create Journal Entries and Update.
                     <br/>
-
+                    Need to fix bugs
                     <h4>Website is best experienced through the Chrome Browser</h4>
 
                     <div className="c-links">

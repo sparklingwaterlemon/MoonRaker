@@ -1,12 +1,12 @@
 import "./JournalEntry.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import * as journalAPI from "../../utilities/portal/journals-api";
 
-export default function JournalEntry({ entry }) {
+export default function JournalEntry({ selectedEntry }) {
     const [update, setUpdate] = useState(false);
 
-    const [subject, setSubject] = useState(entry ? entry.subject : "");
-    const [body, setBody] = useState(entry ? entry.body : "");
+    const [subject, setSubject] = useState(selectedEntry ? selectedEntry.subject : "");
+    const [body, setBody] = useState(selectedEntry ? selectedEntry.body : "");
 
     const handleSubjectChange = (evt) => {
         setSubject(evt.target.value);
@@ -19,7 +19,7 @@ export default function JournalEntry({ entry }) {
         evt.preventDefault();
 
         const updatedEntry = {
-            _id: entry._id,
+            _id: selectedEntry._id,
             subject,
             body,
         };
@@ -34,6 +34,13 @@ export default function JournalEntry({ entry }) {
         }
     };
 
+    // useEffect(()=>{
+    //     console.log(selectedEntry);
+    //     setSubject(selectedEntry.subject);
+    //     setBody(selectedEntry.body);
+    // },[selectedEntry])
+
+
 
     return (
         <>
@@ -42,15 +49,17 @@ export default function JournalEntry({ entry }) {
                 {!update ?
                     <>
                         <div>{subject}</div>
-                        <div>{entry ? entry.formattedDate : ""}</div>
+                        <div>{selectedEntry ? selectedEntry.formattedDate : ""}</div>
                         <div>{body}</div>
+                        <button onClick={()=>setUpdate(!update)}> Update</button>
                     </>
                     :
                     <>
                         <div><input type="text" value={subject} onChange={handleSubjectChange} /></div>
-                        <div>{entry ? entry.formattedDate : ""}</div>
+                        <div>{selectedEntry ? selectedEntry.formattedDate : ""}</div>
                         <div><textarea value={body} onChange={handleBodyChange} /></div>
                         <button onClick={handleUpdateClick}>Update</button>
+                        <button onClick={()=>setUpdate(!update)}> Cancel</button>
                     </>
                 }
             </div>

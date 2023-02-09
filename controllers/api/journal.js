@@ -12,7 +12,7 @@ async function addNew(req,res){
     const newEntry = new Journal(req.body);
     await newEntry.save()
 
-    console.log(newEntry);
+    console.log("newEntry", newEntry);
 }
 
 async function index(req,res){
