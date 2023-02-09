@@ -6,9 +6,9 @@
 }
 
 /* BUTTONS/ TEXT AREA */
-textarea,
-input,
-button {
+#journal-page textarea,
+#journal-page input,
+#journal-page button {
     font-size: 1rem;
     padding: 0.5rem 0.75rem;
     border: none;
@@ -19,18 +19,18 @@ button {
     margin: 0;
 }
 
-button {
+#journal-page button {
     color: #3992ff;
     font-weight: 500;
 }
 
-textarea:hover,
-input:hover,
-button:hover {
+#journal-page textarea:hover,
+#journal-page input:hover,
+#journal-page button:hover {
     box-shadow: 0 0px 1px hsla(0, 0%, 0%, 0.6), 0 1px 2px hsla(0, 0%, 0%, 0.2);
 }
 
-button:active {
+#journal-page button:active {
     box-shadow: 0 0px 1px hsla(0, 0%, 0%, 0.4);
     transform: translateY(1px);
 }
@@ -45,12 +45,10 @@ button:active {
     display: flex;
     flex-direction: column;
 }
-
 #j-sidebar>* {
     padding-left: 2rem;
     padding-right: 2rem;
 }
-
 #j-sidebar h1 {
     font-size: 1rem;
     font-weight: 500;
@@ -64,7 +62,6 @@ button:active {
     border-top: 1px solid #e3e3e3;
     line-height: 1;
 }
-
 #j-sidebar>div {
     display: flex;
     align-items: center;
@@ -73,7 +70,6 @@ button:active {
     padding-bottom: 1rem;
     border-bottom: 1px solid #e3e3e3;
 }
-
 #j-sidebar>div form {
     position: relative;
 }
@@ -85,23 +81,13 @@ button:active {
     overflow: auto;
     padding-top: 1rem;
 }
-
-#j-sidebar nav a span {
+/* #j-sidebar nav a span {
     float: right;
     color: #eeb004;
 }
-
 #j-sidebar nav a.active span {
     color: inherit;
-}
-
-i {
-    color: #818181;
-}
-
-#j-sidebar nav .active i {
-    color: inherit;
-}
+} */
 
 
 #j-sidebar ul {
@@ -109,11 +95,9 @@ i {
     margin: 0;
     list-style: none;
 }
-
 #j-sidebar li {
     margin: 0.25rem 0;
 }
-
 #j-sidebar nav a {
     display: flex;
     align-items: center;
@@ -126,16 +110,13 @@ i {
     text-decoration: none;
     gap: 1rem;
 }
-
 #j-sidebar nav a:hover {
     background: #e3e3e3;
 }
-
 #j-sidebar nav a.active {
     background: hsl(224, 98%, 58%);
     color: white;
 }
-
 #j-sidebar nav a.pending {
     color: hsl(224, 98%, 58%);
 }
