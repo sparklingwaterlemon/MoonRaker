@@ -20,7 +20,7 @@ const ensureLoggedIn = require("./config/ensureLoggedIn");
 
 //
 app.use("/api/users", require("./routes/api/users"));
-app.use("/api/journal", ensureLoggedIn, require("./routes/api/journal"))
+app.use("/api/journal/add", ensureLoggedIn, require("./routes/api/journal"));
 
 
 //

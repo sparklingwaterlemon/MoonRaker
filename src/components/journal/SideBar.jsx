@@ -5,11 +5,11 @@ import * as journalAPI from "../../utilities/portal/journals-api";
 export default function SideBar({ newEntry, setNewEntry,setSelectedEntry }) {
     const [entries, setEntries] = useState([]);
 
-    useEffect(() => {
-        journalAPI.getAll().then(entries => {
-            entries ? setEntries(entries) : setEntries([])
-        });
-    }, []);
+    // useEffect(() => {
+    //     journalAPI.getAll().then(entries => {
+    //         entries ? setEntries(entries) : setEntries([])
+    //     });
+    // }, []);
     
     const handleEntryClick = (entry) => {
         setSelectedEntry(entry);

@@ -1,3 +1,4 @@
+import "./JournalEntry.css";
 import { useState } from "react";
 import * as journalAPI from "../../utilities/portal/journals-api";
 
@@ -36,6 +37,7 @@ export default function JournalEntry({ entry }) {
 
     return (
         <>
+        <section id="journal-entry">
             <div>
                 {!update ?
                     <>
@@ -52,6 +54,7 @@ export default function JournalEntry({ entry }) {
                     </>
                 }
             </div>
+        </section>
         </>
     );
 }

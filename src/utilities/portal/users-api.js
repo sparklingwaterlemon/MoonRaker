@@ -25,6 +25,10 @@ export async function login(cred){
 };
 
 
+
+
+
+
 // helper function to keep things DRY //
 export async function sendRequest(url, method="GET", payload=null){
     const options = { method };
@@ -41,13 +45,21 @@ export async function sendRequest(url, method="GET", payload=null){
         // Prefacing with 'Bearer' is recommened in the HTTP specification
         options.headers.Authorization = `Bearer ${token}`;
     };
- 
-    console.log("helper function options", options);
 
+    console.log("helper function options", options);
+    console.log(url)
+    
     const res = await fetch(url, options);
+
     if(res.ok) return res.json();
+    
     throw new Error("Bad Request");
 };
+
+
+
+
+
 
 
 export function checkToken(){

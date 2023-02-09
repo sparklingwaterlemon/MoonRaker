@@ -7,4 +7,6 @@ router.get('/', journalCtrl.index);
 router.get('/update', journalCtrl.update);
 
 
+router.post('/add', journalCtrl.addNew);
+
 module.exports = router;

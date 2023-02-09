@@ -49,7 +49,8 @@ export default function JournalPage({ setUser }) {
                 {newEntry ?
                     <NewEntry />
                     :
-                    <JournalEntry entry={selectedEntry} />
+                    false
+                    // <JournalEntry entry={selectedEntry} />
                 }
             </main>
         </>

@@ -4,7 +4,10 @@
     color: #121212;
     line-height: 1.5;
 
-    border: 5px solid red;    
+    border: 5px solid red;  
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
 }
 
 /* BUTTONS/ TEXT AREA */

@@ -1,0 +1,10 @@
+#journal-entry{
+    margin-top: 50px;
+    height: calc(100% - 50px);
+    width: calc(100% - 22rem);
+    border: 5px solid yellow;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

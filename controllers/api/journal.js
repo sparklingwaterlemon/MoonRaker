@@ -1,10 +1,19 @@
 const Journal = require("../../models/journal");
 
 module.exports = {
+    addNew,
     index,
     update
 };
 
+async function addNew(req,res){
+    req.body.user = req.user._id;
+
+    const newEntry = new Journal(req.body);
+    await newEntry.save()
+
+    console.log(newEntry);
+}
 
 async function index(req,res){
     const allEntries = await Journal.find({})

@@ -3,6 +3,8 @@
   width: 100%;
   height: 50px;
   color: whitesmoke;
+  
+  position: fixed;
 }
 .navbar ul{
   height: 100%;
