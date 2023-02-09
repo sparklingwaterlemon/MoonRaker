@@ -48,7 +48,7 @@ export async function logOut() {
 };
 
 
-export function checkToken(){
-    return usersAPI.checkToken()
-    .then(dateStr => new Date(dateStr));
+export async function checkToken(){
+    const dateStr = await usersAPI.checkToken();
+    return new Date(dateStr);
 }

@@ -34,7 +34,6 @@ async function login(req,res){
 }
 
 function checkToken(req, res) {
-    // console.log('req.user', req.user);
     res.json(req.exp);
 };
 
