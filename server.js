@@ -16,9 +16,12 @@ app.use(express.static(path.join(__dirname, 'build')));
 
 //
 app.use(require("./config/checkToken"));
+const ensureLoggedIn = require("./config/ensureLoggedIn");
 
 //
 app.use("/api/users", require("./routes/api/users"));
+app.use("/api/journal", ensureLoggedIn, require("./routes/api/journal"))
+
 
 //
 app.get('/*', function(req,res){
@@ -26,7 +29,7 @@ app.get('/*', function(req,res){
 });
 
 
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 3005;
 
 
 app.listen(port, function(){
