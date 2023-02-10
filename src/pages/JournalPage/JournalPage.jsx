@@ -1,5 +1,5 @@
 import "./JournalPage.css";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import * as journalAPI from "../../utilities/portal/journals-api"
 
 import PortalNavBar from "./components/PortalNavBar"

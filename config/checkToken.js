@@ -4,6 +4,7 @@ module.exports = function (req, res, next) {
   // Check for the token being sent in a header or as a query param
   let token = req.get('Authorization') || req.query.token;
 
+  console.log(token);
   if (token) {
     // Remove the "Bearer "
     token = token.replace('Bearer ', '');

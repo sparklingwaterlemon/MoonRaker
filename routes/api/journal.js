@@ -4,9 +4,10 @@ const journalCtrl = require("../../controllers/api/journal");
 
 // BASE_URL /api/journal
 router.get('/', journalCtrl.index);
-router.get('/update', journalCtrl.update);
-
 
 router.post('/add', journalCtrl.addNew);
+
+router.put('/update', journalCtrl.update);
+
 
 module.exports = router;

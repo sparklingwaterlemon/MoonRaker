@@ -1,5 +1,4 @@
 import "./NewEntry.css";
-import { useState } from "react";
 import * as journalAPI from "../../../utilities/portal/journals-api"
 
 

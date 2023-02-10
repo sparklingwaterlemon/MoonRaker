@@ -18,6 +18,7 @@ export async function sendRequest(url, method="GET", payload=null){
     };
 
     console.log("helper function options", options);
+    console.log("url", url)
     
     const res = await fetch(url, options);
 

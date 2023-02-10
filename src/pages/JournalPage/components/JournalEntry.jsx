@@ -2,45 +2,46 @@ import "./JournalEntry.css";
 import { useState, useEffect } from "react";
 import * as journalAPI from "../../../utilities/portal/journals-api";
 
-export default function JournalEntry({ selectedEntry }) {
+export default function JournalEntry({ activeEntry }) {
     const [update, setUpdate] = useState(false);
-    const [subject, setSubject] = useState(selectedEntry ? selectedEntry.subject : "");
-    const [body, setBody] = useState(selectedEntry ? selectedEntry.body : "");
+    const [subject, setSubject] = useState("");
+    const [body, setBody] = useState("");
 
-
+    useEffect(()=>{
+        setSubject(activeEntry.subject);
+        setBody(activeEntry.body)
+    },[activeEntry]);
 
     
     const handleSubjectChange = (evt) => {
         setSubject(evt.target.value);
-    }
+    };
     const handleBodyChange = (evt) => {
         setBody(evt.target.value);
     };
 
-    const handleUpdateClick = (evt) => {
+    const handleUpdateClick = async (evt) => {
         evt.preventDefault();
 
         const updatedEntry = {
-            _id: selectedEntry._id,
+            _id: activeEntry._id,
             subject,
             body,
         };
         try {
-            journalAPI.update(updatedEntry).then((entry) => {
+            await journalAPI.update(updatedEntry).then((entry) => {
                 setSubject(entry.subject);
                 setBody(entry.body);
-                setUpdate(!update);
             });
         } catch (err) {
             throw new Error();
         }
+        setUpdate(!update);
     };
 
-    // useEffect(()=>{
-    //     console.log(selectedEntry);
-    //     setSubject(selectedEntry.subject);
-    //     setBody(selectedEntry.body);
-    // },[selectedEntry])
+    useEffect(()=>{
+        console.log("activeEntry");
+    },[activeEntry])
 
 
 
@@ -51,14 +52,14 @@ export default function JournalEntry({ selectedEntry }) {
                 {!update ?
                     <>
                         <div>{subject}</div>
-                        <div>{selectedEntry ? selectedEntry.formattedDate : ""}</div>
+                        <div>{activeEntry ? activeEntry.formattedDate : ""}</div>
                         <div>{body}</div>
                         <button onClick={()=>setUpdate(!update)}> Update</button>
                     </>
                     :
                     <>
                         <div><input type="text" value={subject} onChange={handleSubjectChange} /></div>
-                        <div>{selectedEntry ? selectedEntry.formattedDate : ""}</div>
+                        <div>{activeEntry ? activeEntry.formattedDate : ""}</div>
                         <div><textarea value={body} onChange={handleBodyChange} /></div>
                         <button onClick={handleUpdateClick}>Update</button>
                         <button onClick={()=>setUpdate(!update)}> Cancel</button>

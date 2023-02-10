@@ -24,16 +24,18 @@ async function index(req,res){
 
 async function update(req,res){
     const updatedEntry = req.body;
-    await Journal.findByIdAndUpdate(updatedEntry._id, { 
-        $set: { 
-            subject: updatedEntry.subject, 
-            body: updatedEntry.body }
-        },
-        { 
-            new: true
-        },
-        (err, entry) => {
-        if (err) return res.status(500).send(err);
+    console.log("controller", req.body);
+    try{
+        const entry = await Journal.findByIdAndUpdate(updatedEntry._id, { 
+            $set: { 
+                subject: updatedEntry.subject, 
+                body: updatedEntry.body }
+            },
+            { 
+                new: true
+            });
         return res.status(200).send(entry);
-    });
+    } catch (err){
+        return res.status(500).send(err);
+    }
 };
