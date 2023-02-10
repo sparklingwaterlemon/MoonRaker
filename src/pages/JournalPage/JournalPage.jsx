@@ -19,8 +19,6 @@
 
 
 
-
-
 import "./JournalPage.css";
 import { useState, useEffect } from "react";
 
@@ -31,14 +29,15 @@ import JournalEntry from "../../components/journal/JournalEntry";
 
 
 export default function JournalPage({ setUser }) {
-    
-    const [selectedEntry, setSelectedEntry] = useState(null);
-
-    const [toggleToNewEntry, setToggleToNewEntry] = useState(false);
-    // useEffect(()=>{
-    //    setSelectedEntry(selectedEntry);
-    // },[selectedEntry]);
-
+    const [allEntries, setAllEntries] = useState([]);
+    const [activeEntry, setActiveEntry] = useState();
+    // const [toggleToNewEntry, setToggleToNewEntry] = useState(false);
+ 
+    useEffect(() => {
+        journalAPI.getAll().then(allEntries => {
+            allEntries ? setAllEntries(allEntries) : setAllEntries([])
+        });
+    }, []);
 
 
 
@@ -50,12 +49,23 @@ export default function JournalPage({ setUser }) {
         <>
             <main id="journal-page">
                 <PortalNavBar setUser={setUser} />
-                <SideBar toggleToNewEntry={toggleToNewEntry} setToggleToNewEntry={setToggleToNewEntry} selectedEntry={selectedEntry} setSelectedEntry={setSelectedEntry}/>
-                {toggleToNewEntry ?
+        
+                <SideBar 
+                    allEntries={allEntries}
+                    activeEntry={activeEntry} 
+                    setActiveEntry={setActiveEntry}
+                />
+                
+                <JournalEntry 
+                    activeEntry={activeEntry} 
+                />
+
+
+                {/* {toggleToNewEntry ?
                     <NewEntry />
                     :
                     <JournalEntry selectedEntry={selectedEntry} />
-                }
+                } */}
             </main>
         </>
     )

@@ -2,37 +2,29 @@ import "./SideBar.css";
 import { useState, useEffect } from "react";
 import * as journalAPI from "../../utilities/portal/journals-api";
 
-export default function SideBar({ toggleToNewEntry, setToggleToNewEntry, selectedEntry, setSelectedEntry }) {
-    const [allEntries, setAllEntries] = useState([]);
-
-    useEffect(() => {
-        journalAPI.getAll().then(entries => {
-            entries ? setAllEntries(entries) : setAllEntries([])
-        });
-    }, []);
-    
-    const handleEntryClick = (entry) => {
-        setSelectedEntry(entry);
-    };
+export default function SideBar({ allEntries, activeEntry, setActiveEntry }) {
+    const entries = allEntries.map((entry)=>{
+        <li
+            key={entry._id}
+            className={entry._id === activeEntry._id ? "active" : "" } 
+            onClick={() => setActiveEntry(entry)}
+        >
+            <h3>{entry.subject}</h3>
+            <p>{entry.formattedDate}</p>
+        </li>
+    })
 
 
     return (
         <section id="j-sidebar">
             <h1> Journal Entries </h1>
-            <div>
+            {/* <div>
                 <button type="submit" onClick={() => setToggleToNewEntry(!toggleToNewEntry)}>New</button>
-            </div>
+            </div> */}
 
             <nav>
                 <ul>
-                    {allEntries.map(entry => (
-                        <li key={entry._id} onClick={handleEntryClick(entry)}>
-                            <a>
-                                <h3>{entry.subject}</h3>
-                                <p>{entry.formattedDate}</p>
-                            </a>
-                        </li>
-                    ))}
+                    {entries}
                 </ul>
             </nav>
         </section>

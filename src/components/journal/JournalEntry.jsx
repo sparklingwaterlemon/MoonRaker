@@ -4,10 +4,12 @@ import * as journalAPI from "../../utilities/portal/journals-api";
 
 export default function JournalEntry({ selectedEntry }) {
     const [update, setUpdate] = useState(false);
-
     const [subject, setSubject] = useState(selectedEntry ? selectedEntry.subject : "");
     const [body, setBody] = useState(selectedEntry ? selectedEntry.body : "");
 
+
+
+    
     const handleSubjectChange = (evt) => {
         setSubject(evt.target.value);
     }
