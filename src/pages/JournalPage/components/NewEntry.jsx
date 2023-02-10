@@ -1,24 +1,34 @@
 import "./NewEntry.css";
 import { useState } from "react";
-import * as journalAPI from "../../utilities/portal/journals-api"
-
-export default function NewEntry() {
-    const [newEntry, setNewEntry] = useState({
-        subject: "",
-        body: "",
-    });
+import * as journalAPI from "../../../utilities/portal/journals-api"
 
 
-    const handleNewEntrySubmit = async function (evt) {
+export default function NewEntry({
+    newEntry, 
+    setNewEntry, 
+    setAllEntries,
+    toggleToNewEntry,
+    setToggleToNewEntry }){
+
+
+
+    const handleNewEntrySubmit = (evt) => {
         evt.preventDefault();
-        journalAPI.addEntry(newEntry);
-        // try{
-        //     journalAPI.addEntry(newEntry);
-        // } catch (err) {
-        //     throw new Error();
-        // }
+        try{
+            journalAPI.addEntry(newEntry);
+            journalAPI.getAll().then(allEntries => {
+                console.log("getting all entries 2");
+                allEntries ? setAllEntries(allEntries) : setAllEntries([]);
+            });
+        } catch (err){
+            throw new Error();
+        }
+        toggleBack();
     };
 
+    const toggleBack =()=>{
+        setToggleToNewEntry(!toggleToNewEntry);
+    };
 
     const handlNewEntryFormChange = (evt) => {
         setNewEntry({ ...newEntry, [evt.target.name]: evt.target.value });

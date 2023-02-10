@@ -46,9 +46,3 @@ export async function login(cred) {
 export async function logOut() {
     localStorage.removeItem('token');
 };
-
-
-export async function checkToken(){
-    const dateStr = await usersAPI.checkToken();
-    return new Date(dateStr);
-}

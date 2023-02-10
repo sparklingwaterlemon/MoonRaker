@@ -1,6 +1,5 @@
-import "./PortalPage.css";
+import "./Portal.css";
 import { useState } from "react";
-// import useHistory ... whats it for reactv6
 import { getUser } from "../../utilities/portal/users-service"
 
 import JournalPage from "../JournalPage/JournalPage";

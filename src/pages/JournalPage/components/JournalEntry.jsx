@@ -1,6 +1,6 @@
 import "./JournalEntry.css";
 import { useState, useEffect } from "react";
-import * as journalAPI from "../../utilities/portal/journals-api";
+import * as journalAPI from "../../../utilities/portal/journals-api";
 
 export default function JournalEntry({ selectedEntry }) {
     const [update, setUpdate] = useState(false);

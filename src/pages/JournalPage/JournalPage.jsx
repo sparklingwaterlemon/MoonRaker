@@ -1,49 +1,35 @@
-// import * as usersService from "../../utilities/portal/users-service";
-// <button onClick={handleCheckToken}> Check when login expires </button>
-// async function handleCheckToken(){
-//     const expDate = await usersService.checkToken();
-//     console.log(expDate);
-// };
-
-// <form id="j-search-form" role="search" onSubmit={handleJSearch}>
-//    <input
-//        autocomplete="off"
-//        id="q"
-//        aria-label="Search entries"
-//        placeholder="Search"
-//        type="search"
-//        name="q"
-//    />
-//    <div className="sr-only" aria-live="polite" />
-//</form>
-
-
-
 import "./JournalPage.css";
-import { useState, useEffect } from "react";
-import * as journalAPI from "../../utilities/portal/journals-api";
+import { useState, useEffect, useRef } from "react";
+import * as journalAPI from "../../utilities/portal/journals-api"
 
-import PortalNavBar from "./PortalNavBar";
-import SideBar from "./SideBar";
-// import JournalEntry from "./JournalEntry";
-import NewEntry from "./NewEntry";
+import PortalNavBar from "./components/PortalNavBar"
+import SideBar from "./components/SideBar";
+import JournalEntry from "./components/JournalEntry";
+import NewEntry from "./components/NewEntry"
 
 
 export default function JournalPage({ user, setUser }) {
     const [allEntries, setAllEntries] = useState([]);
     const [activeEntry, setActiveEntry] = useState([]);
-    // const [toggleToNewEntry, setToggleToNewEntry] = useState(false);
+    const [toggleToNewEntry, setToggleToNewEntry] = useState(false);
+    const [newEntry, setNewEntry] = useState({
+        subject: "",
+        body: "",
+    });
+    
  
+    
     useEffect(() => {
-        journalAPI.getAll().then(allEntries => {
-            allEntries ? setAllEntries(allEntries) : setAllEntries([])
-        });
+        const getAllEntries = () => {
+            journalAPI.getAll().then(allEntries => {
+                console.log("getting all entries 1");
+                allEntries ? setAllEntries(allEntries) : setAllEntries([])
+            });
+        }
+        getAllEntries();
     }, []);
 
 
-
-
- 
 
 
     return (
@@ -55,19 +41,21 @@ export default function JournalPage({ user, setUser }) {
                     allEntries={allEntries}
                     activeEntry={activeEntry} 
                     setActiveEntry={setActiveEntry}
+                    toggleToNewEntry={toggleToNewEntry} 
+                    setToggleToNewEntry={setToggleToNewEntry}
                 />
 
-                <NewEntry />                
-                {/* <JournalEntry 
-                    activeEntry={activeEntry} 
-                /> */}
-
-
-                {/* {toggleToNewEntry ?
-                    <NewEntry />
+                {toggleToNewEntry ?
+                    <NewEntry 
+                        newEntry={newEntry} 
+                        setNewEntry={setNewEntry}
+                        setAllEntries={setAllEntries}
+                        toggleToNewEntry={toggleToNewEntry} 
+                        setToggleToNewEntry={setToggleToNewEntry}
+                    />
                     :
-                    <JournalEntry selectedEntry={selectedEntry} />
-                } */}
+                    <JournalEntry activeEntry={activeEntry} />
+                }
             </main>
         </>
     )

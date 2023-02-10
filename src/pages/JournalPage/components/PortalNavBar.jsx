@@ -1,6 +1,6 @@
 import "./PortalNavBar.css";
 import { Link } from "react-router-dom";
-import { logOut } from "../../utilities/portal/users-service";
+import { logOut } from "../../../utilities/portal/users-service";
 
 export default function PortalNavBar({ user, setUser }){
     function handleLogOut(){
