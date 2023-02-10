@@ -54,7 +54,7 @@ export default function JournalPage({ user, setUser }) {
                         setToggleToNewEntry={setToggleToNewEntry}
                     />
                     :
-                    <JournalEntry activeEntry={activeEntry} />
+                    <JournalEntry allEntries={allEntries} setAllEntries={setAllEntries} activeEntry={activeEntry} setActiveEntry={setActiveEntry}/>
                 }
             </main>
         </>

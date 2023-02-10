@@ -3,7 +3,8 @@ const Journal = require("../../models/journal");
 module.exports = {
     addNew,
     index,
-    update
+    update,
+    destroy,
 };
 
 async function addNew(req,res){
@@ -39,3 +40,12 @@ async function update(req,res){
         return res.status(500).send(err);
     }
 };
+
+async function destroy(req, res) {
+    try {
+        const deletedEntry = await Journal.findByIdAndRemove(req.body._id);
+        return res.status(200).send(deletedEntry);
+    } catch (err) {
+        return res.status(500).send(err);
+    }
+}

@@ -20,12 +20,6 @@ const entriesSchema = new Schema({
     timestamps: true
 });
 
-entriesSchema.virtual('formattedDate').get(function(){
-    return this.createdAt.toLocaleDateString('en-US', {
-        month: 'long',
-        day: 'numeric',
-        year: 'numeric',
-    });
-});
+
 
 module.exports = mongoose.model('Entries', entriesSchema);

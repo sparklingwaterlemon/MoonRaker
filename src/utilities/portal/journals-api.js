@@ -14,3 +14,6 @@ export function update(updatedEntry){
     return sendRequest(`${BASE_URL}/update`, "PUT", updatedEntry)
 };
 
+export function deleteEntry(activeEntry){
+    return sendRequest(`${BASE_URL}/delete`, "DELETE", activeEntry)
+};

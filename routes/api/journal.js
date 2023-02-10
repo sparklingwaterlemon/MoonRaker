@@ -9,5 +9,7 @@ router.post('/add', journalCtrl.addNew);
 
 router.put('/update', journalCtrl.update);
 
+router.delete('/delete', journalCtrl.destroy);
+
 
 module.exports = router;
