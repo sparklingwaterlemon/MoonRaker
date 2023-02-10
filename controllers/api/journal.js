@@ -16,7 +16,7 @@ async function addNew(req,res){
 }
 
 async function index(req,res){
-    const allEntries = await Journal.find({})
+    const allEntries = await Journal.find({user: req.user._id});
     allEntries.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
     res.json(allEntries);
 };

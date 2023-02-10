@@ -25,8 +25,8 @@ import * as journalAPI from "../../utilities/portal/journals-api";
 
 import PortalNavBar from "./PortalNavBar";
 import SideBar from "./SideBar";
-import JournalEntry from "./JournalEntry";
-// import NewEntry from "../../components/journal/NewEntry";
+// import JournalEntry from "./JournalEntry";
+import NewEntry from "./NewEntry";
 
 
 export default function JournalPage({ user, setUser }) {
@@ -56,10 +56,11 @@ export default function JournalPage({ user, setUser }) {
                     activeEntry={activeEntry} 
                     setActiveEntry={setActiveEntry}
                 />
-                
-                <JournalEntry 
+
+                <NewEntry />                
+                {/* <JournalEntry 
                     activeEntry={activeEntry} 
-                />
+                /> */}
 
 
                 {/* {toggleToNewEntry ?

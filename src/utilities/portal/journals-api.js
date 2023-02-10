@@ -1,4 +1,4 @@
-import { sendRequest } from "./users-api";
+import { sendRequest } from "./helper-function";
 
 const BASE_URL = '/api/journal';
 

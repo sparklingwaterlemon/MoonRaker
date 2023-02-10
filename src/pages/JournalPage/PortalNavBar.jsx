@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { logOut } from "../../utilities/portal/users-service";
 
 export default function PortalNavBar({ user, setUser }){
-    console.log(user);
     function handleLogOut(){
         logOut();
         setUser(null);
