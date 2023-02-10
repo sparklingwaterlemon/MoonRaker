@@ -21,16 +21,17 @@
 
 import "./JournalPage.css";
 import { useState, useEffect } from "react";
+import * as journalAPI from "../../utilities/portal/journals-api";
 
-import PortalNavBar from "../../components/portal/PortalNavBar/PortalNavBar";
-import NewEntry from "../../components/journal/NewEntry";
-import SideBar from "../../components/journal/SideBar";
-import JournalEntry from "../../components/journal/JournalEntry";
+import PortalNavBar from "./PortalNavBar";
+import SideBar from "./SideBar";
+import JournalEntry from "./JournalEntry";
+// import NewEntry from "../../components/journal/NewEntry";
 
 
-export default function JournalPage({ setUser }) {
+export default function JournalPage({ user, setUser }) {
     const [allEntries, setAllEntries] = useState([]);
-    const [activeEntry, setActiveEntry] = useState();
+    const [activeEntry, setActiveEntry] = useState([]);
     // const [toggleToNewEntry, setToggleToNewEntry] = useState(false);
  
     useEffect(() => {
@@ -48,7 +49,7 @@ export default function JournalPage({ setUser }) {
     return (
         <>
             <main id="journal-page">
-                <PortalNavBar setUser={setUser} />
+                <PortalNavBar user={user} setUser={setUser} />
         
                 <SideBar 
                     allEntries={allEntries}

@@ -11,8 +11,6 @@
 }
 
 /* BUTTONS/ TEXT AREA */
-#journal-page textarea,
-#journal-page input,
 #journal-page button {
     font-size: 1rem;
     padding: 0.5rem 0.75rem;
@@ -22,15 +20,10 @@
     background-color: white;
     line-height: 1.5;
     margin: 0;
-}
-
-#journal-page button {
     color: #3992ff;
     font-weight: 500;
 }
 
-#journal-page textarea:hover,
-#journal-page input:hover,
 #journal-page button:hover {
     box-shadow: 0 0px 1px hsla(0, 0%, 0%, 0.6), 0 1px 2px hsla(0, 0%, 0%, 0.2);
 }
@@ -40,3 +33,4 @@
     transform: translateY(1px);
 }
 
+  

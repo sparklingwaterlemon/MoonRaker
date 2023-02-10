@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import * as journalAPI from "../../utilities/portal/journals-api";
 
 export default function SideBar({ allEntries, activeEntry, setActiveEntry }) {
-    const entries = allEntries.map((entry)=>{
+    const entries = allEntries.map((entry)=>
         <li
             key={entry._id}
             className={entry._id === activeEntry._id ? "active" : "" } 
@@ -12,7 +12,7 @@ export default function SideBar({ allEntries, activeEntry, setActiveEntry }) {
             <h3>{entry.subject}</h3>
             <p>{entry.formattedDate}</p>
         </li>
-    })
+    );
 
 
     return (

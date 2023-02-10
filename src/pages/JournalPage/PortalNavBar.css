@@ -1,4 +1,4 @@
-.navbar {
+#p-navbar {
   background: #333;
   width: 100%;
   height: 50px;
@@ -6,7 +6,7 @@
   
   position: fixed;
 }
-.navbar ul{
+#p-navbar ul{
   height: 100%;
   width: 100%;
 
@@ -16,11 +16,13 @@
   align-items: center;
 }
 
-.navbar li{
+#p-navbar li {
   font-size: 1.2em;
   margin-left: 20px;
   margin-right: 20px;
+  color: whitesmoke;
 }
-.navbar a:visited{
+
+#p-navbar li a:visited{
   color: whitesmoke;
 }

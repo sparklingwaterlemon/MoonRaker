@@ -56,7 +56,7 @@
 #j-sidebar li {
     margin: 0.25rem 0;
 }
-#j-sidebar nav a {
+#j-sidebar nav li {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -68,10 +68,11 @@
     text-decoration: none;
     gap: 1rem;
 }
-#j-sidebar nav a:hover {
+#j-sidebar nav li:hover {
     background: #e3e3e3;
+    cursor: pointer;
 }
-#j-sidebar nav a.active {
+#j-sidebar nav li.active {
     background: hsl(224, 98%, 58%);
     color: white;
 }
