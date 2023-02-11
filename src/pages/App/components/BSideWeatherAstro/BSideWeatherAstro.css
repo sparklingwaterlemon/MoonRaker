@@ -5,6 +5,8 @@
     font-size: 1.1em;
     padding: 25px;
     color: #16103b;
+    border-radius: 20px;
+    box-shadow: 0 0px 30px hsla(0, 0%, 0%, 0.9), 0 1px 30px hsla(0, 0%, 0%, 0.9);
 }
 .t-banner{
     background-color: white;

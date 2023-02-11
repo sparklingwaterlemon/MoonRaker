@@ -1,12 +1,16 @@
-.a-side-container{
+.a-side-container {
     height: 150px;
-    width: 330px;  
-
-    background: lightgoldenrodyellow;
-    color: olivedrab;
+    width: 330px;
+    background: rgb(246, 246, 221);
+    color: rgb(82, 110, 27);
     font-size: 2em;
-    
     display: flex;
     justify-content: center;
     align-items: center;
-}
+    border-radius: 20px;
+    box-shadow: 
+        0 0 0px rgb(0, 0, 0),
+        0 0 30px rgb(0, 0, 0),
+        0 0 50px rgb(0, 0, 0)
+        ;
+  }

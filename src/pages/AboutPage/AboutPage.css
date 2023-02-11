@@ -1,4 +1,4 @@
-#about-section{
+#about-section {
     min-height: 100vh;
     height: 100vh;
     width: 100%;
@@ -10,14 +10,16 @@
     justify-content: center;
     align-items: center;
 }
-.about-back-button{
+
+.about-back-button {
     position: absolute;
     top: 10px;
     left: 10px;
     width: 100px;
     cursor: pointer;
 }
-.about-container{
+
+.about-container {
     height: 500px;
     width: 800px;
     outline: 5px solid whitesmoke;
@@ -30,7 +32,8 @@
     justify-content: flex-start;
     align-items: center;
 }
-.about-links{
+
+.about-links {
     margin: 10px 0px;
     text-align: center;
     width: inherit;
@@ -39,14 +42,14 @@
     justify-content: center;
 }
 
-.about-header{
+.about-header {
     margin-top: 20px;
     width: inherit;
     font-size: 3em;
     color: pink;
 }
 
-.about-href{
+.about-href {
     width: 100%;
     height: 75px;
     font-size: 2em;
@@ -55,13 +58,38 @@
     justify-content: center;
     align-items: center;
 }
-.about-href:visited{
-    color:whitesmoke;
+
+.about-href:visited {
+    color: whitesmoke;
 }
-.about-href:hover{
+
+.about-href:hover {
     color: pink;
     font-style: italic;
 }
 
 
 
+/* For screens with a maximum width of 767px (smartphones) */
+@media (max-width: 767px) {
+    #about-section {
+        min-height: auto;
+        height: 100vh;
+    }
+
+    .about-container {
+        height: auto;
+        width: 90%;
+        margin: 50px auto;
+    }
+
+    .about-header {
+        margin-top: 10px;
+        font-size: 2em;
+    }
+
+    .about-href {
+        height: 50px;
+        font-size: 1.5em;
+    }
+}
