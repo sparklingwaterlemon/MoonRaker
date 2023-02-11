@@ -1,10 +1,114 @@
-#journal-entry{
+#no-entry-banner{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+#no-entry-banner h1{
+    font-weight: 500;
+}
+.entry-solid{
     margin-top: 50px;
     height: calc(100% - 50px);
     width: calc(100% - 22rem);
-    border: 5px solid yellow;
+
+    min-width: 70%;
 
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 20px;
+}
+.e-s-container{
+    width: 90%;
+    height: 90%;
+    padding: 40px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.e-s-container div{
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+
+    font-size: 16px;
+    
+    border-radius: 5px;
+    vertical-align: text-top;
+}
+.e-s-container.change div{
+    padding: 0px;
+}
+
+.e-subject-date{
+    border: 1px solid lightgrey;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+}
+.e-subject-date.change{
+    border: none;
+}
+.e-subject-date input{
+    padding: 10px;
+    margin: 0;
+    width: inherit;
+    height: inherit;
+
+    font-size: 16px;
+    border: 1px solid dodgerblue;
+}
+
+.e-body{
+    border: 1px solid lightgrey;
+    height: 250px;
+    overflow: auto;
+}
+.e-body textarea{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid dodgerblue;
+
+}
+
+#e-btn-house-updating{
+    margin-top: 10px !important;
+    padding: 0;
+    color: slategray;
+    margin-right: 40px !important;
+}
+#e-btn-house-exit{
+    color: lightsalmon;
+}
+#e-btn-house-exit:hover{
+    color: orangered !important;
+}
+
+#e-btn-house{
+    display: flex;
+}
+#e-btn-del{
+    margin-left: 10px !important;
+    color: lightsalmon;
+}
+#e-btn-del:hover{
+    color: red !important;
+}
+
+
+#e-btn-house button{
+    margin-right: 40px;
+    color: slategray;
 }

@@ -9,7 +9,6 @@
     flex-direction: column;
 }
 
-
 #j-sidebar nav {
     flex: 1;
     overflow: auto;
@@ -32,20 +31,21 @@
 #j-sidebar>div form {
     position: relative;
 }
-
-
-#j-sidebar h1 {
-    font-size: 1rem;
-    font-weight: 500;
+#j-b{
+    order: 1;
 
     display: flex;
-    align-items: center;
-    order: 1;
+    justify-content: space-between;
+
 
     margin: 0;
     padding: 1rem 2rem;
     border-top: 1px solid #e3e3e3;
     line-height: 1;
+}
+
+#j-b h1 {
+    font-weight: 400;
 }
 
 #j-sidebar ul {
@@ -56,6 +56,10 @@
 #j-sidebar li {
     margin: 0.25rem 0;
 }
+#j-sidebar li h3{
+    font-weight: 400;
+}
+
 #j-sidebar nav li {
     display: flex;
     align-items: center;
@@ -81,3 +85,6 @@
 }
 
 
+#sidebar-btn{
+    color: #3992ff;
+}

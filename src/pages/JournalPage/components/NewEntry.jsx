@@ -36,14 +36,16 @@ export default function NewEntry({
     return (
         <>
             <section id="new-entry">
-                <h1> How are you today?</h1>
+                <div className="n-e-banner">
+                    <h1> Check In and Write Your Gratitudes</h1>
+                </div>
                 <div className="new-entry-container">
                     <form autoComplete="off" className="new-entry-form" onSubmit={handleNewEntrySubmit}>
                         <label>Subject</label>
                         <input id="subtext" type="text" name="subject" onChange={handlNewEntryFormChange} />
                         <label>Body</label>
-                        <input id="bodytext" type="text" name="body" onChange={handlNewEntryFormChange} />
-                    <button id="butt">New Entry</button>
+                        <textarea id="bodytext" type="text" name="body" onChange={handlNewEntryFormChange} />
+                    <button id="new-btn">New Entry</button>
                     </form>
                 </div>
             </section>

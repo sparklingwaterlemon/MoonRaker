@@ -12,7 +12,7 @@ export default function PortalNavBar({ user, setUser }){
         <nav id="p-navbar">
             <ul>
                 <li><Link to="/"> Home </Link></li>
-                <li>{user.name}</li>
+                <li>Hello, {user.name}</li>
                 <li><Link to="/" onClick={handleLogOut}> Log Out </Link></li>
             </ul>
         </nav>

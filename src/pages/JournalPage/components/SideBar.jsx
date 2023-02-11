@@ -18,18 +18,22 @@ export default function SideBar({ allEntries, activeEntry, setActiveEntry, toggl
 
     useEffect(() => {
         const entries = allEntries.map((entry) => {
+            let subject = entry.subject
             // to shorten subject display:
-            if(entry.subject.length > 8) {
-                entry.subject = entry.subject.slice(0, 8) + "...";
+            if(subject.length > 8) {
+                subject = subject.slice(0, 8) + "...";
             };
 
             return (
                 <li
                     key={entry._id}
-                    onClick={() => setActiveEntry(entry)}
+                    onClick={() => {
+                        setActiveEntry(entry);
+                        setToggleToNewEntry(false);
+                    }}
                     className={activeEntry && entry._id === activeEntry._id ? "active" : "" }
                     >
-                    <h3>{entry.subject}</h3>
+                    <h3>{subject}</h3>
                     <p>{formattedDate(entry.createdAt)}</p>
                 </li>
             );
@@ -39,11 +43,18 @@ export default function SideBar({ allEntries, activeEntry, setActiveEntry, toggl
     }, [activeEntry, allEntries])
 
 
+
     return (
         <section id="j-sidebar">
-            <h1> Journal Entries </h1>
-            <div>
-                <button type="submit" onClick={() => setToggleToNewEntry(!toggleToNewEntry)}>New</button>
+            <div id="j-b">
+                <h1> Journal</h1>
+                <button 
+                    id="sidebar-btn" 
+                    type="submit" 
+                    onClick={() => setToggleToNewEntry(!toggleToNewEntry)}
+                >
+                    New Entry
+                </button>
             </div>
 
 

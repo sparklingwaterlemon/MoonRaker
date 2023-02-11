@@ -3,14 +3,14 @@ import { useState, useEffect } from "react";
 import * as journalAPI from "../../../utilities/portal/journals-api";
 import { act } from "react-dom/test-utils";
 
-export default function JournalEntry({ allEntries, setAllEntries , activeEntry, setActiveEntry }) {
+export default function JournalEntry({ allEntries, setAllEntries, activeEntry, setActiveEntry }) {
     const [update, setUpdate] = useState(false);
     const [subject, setSubject] = useState("");
     const [body, setBody] = useState("");
 
 
     useEffect(() => {
-        if(activeEntry){
+        if (activeEntry) {
             setSubject(activeEntry.subject);
             setBody(activeEntry.body)
         }
@@ -24,7 +24,6 @@ export default function JournalEntry({ allEntries, setAllEntries , activeEntry, 
     };
 
     const handleUpdateClick = async (evt) => {
-        evt.preventDefault();
         const updatedEntry = {
             _id: activeEntry._id,
             subject,
@@ -35,6 +34,9 @@ export default function JournalEntry({ allEntries, setAllEntries , activeEntry, 
                 setSubject(entry.subject);
                 setBody(entry.body);
             });
+            await journalAPI.getAll().then(allEntries => {
+                allEntries ? setAllEntries(allEntries) : setAllEntries([])
+            });
         } catch (err) {
             throw new Error();
         }
@@ -43,10 +45,10 @@ export default function JournalEntry({ allEntries, setAllEntries , activeEntry, 
 
     const handleDeleteClick = async (evt) => {
         try {
-            await journalAPI.deleteEntry(activeEntry);            
+            await journalAPI.deleteEntry(activeEntry);
             const updatedEntries = await journalAPI.getAll();
 
-            if(allEntries){
+            if (allEntries) {
                 setAllEntries(updatedEntries);
                 setActiveEntry(updatedEntries[0]);
             } else {
@@ -70,33 +72,63 @@ export default function JournalEntry({ allEntries, setAllEntries , activeEntry, 
 
     return (
         <>
-            <section id="journal-entry">
-                <div>
-                    {activeEntry ?
-                        <>
-                            {!update ?
-                                <>
-                                    <div>{activeEntry ? subject : ""}</div>
-                                    <div>{activeEntry ? formattedDate(activeEntry.createdAt)  : ""}</div>
-                                    <div>{body}</div>
-                                    <button onClick={() => setUpdate(!update)}> Update</button>
-                                    <button onClick={() => handleDeleteClick()}>Delete</button>
-                                </>
-                                :
-                                <>
-                                    <div><input type="text" value={subject} onChange={handleSubjectChange} /></div>
-                                    <div>{activeEntry ? formattedDate(activeEntry.createdAt) : ""}</div>
-                                    <div><textarea value={body} onChange={handleBodyChange} /></div>
-                                    <button onClick={(evt) => handleUpdateClick(evt)}>Update</button>
-                                    <button onClick={() => setUpdate(!update)}> Cancel</button>
-                                </>
-                            }
-                        </>
+            {activeEntry ?
+                <>
+                    {!update ?
+                        <section className="entry-solid">
+                            <div className="e-s-container">
+                                <div className="e-subject-date">
+                                    <p>{activeEntry ? subject : ""} </p>
+                                    <p>{activeEntry ? formattedDate(activeEntry.createdAt) : ""}</p>
+                                </div>
+                                <div className="e-body"> {body} </div>
+
+                                <div id="e-btn-house">
+                                    <button onClick={() => setUpdate(!update)}> Update </button>
+                                </div>
+                                <button id="e-btn-del" onClick={() => handleDeleteClick()}> Delete </button>
+                            </div>
+                        </section>
+
                         :
-                        "Namaste"
+
+                        <section className="entry-solid">
+                            <div className="e-s-container change">
+                                <div className="e-subject-date change">
+                                    <input
+                                        type="text"
+                                        value={subject}
+                                        onChange={handleSubjectChange}
+                                    />
+                                </div>
+                                <div className="e-body">
+                                    <textarea
+                                        value={body}
+                                        onChange={handleBodyChange}
+                                    />
+                                </div>
+                                <div>
+                                    <button onClick={(evt) => {
+                                        handleUpdateClick(evt)
+                                        }}
+                                        id="e-btn-house-updating"
+                                    >
+                                    Updating...
+                                    </button>
+                                    <button 
+                                        id="e-btn-house-exit"
+                                        onClick={() => setUpdate(!update)}> Exit Update</button>
+                                </div>
+                            </div>
+                        </section>
                     }
+                </>
+                :
+                <div id="no-entry-banner">
+                    <h1>Namaste</h1>
+                    <p>What thoughts are occupying your mind today?</p>
                 </div>
-            </section>
+            }
         </>
     );
 }
