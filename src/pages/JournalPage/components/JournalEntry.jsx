@@ -1,15 +1,19 @@
 import "./JournalEntry.css";
 import { useState, useEffect } from "react";
 import * as journalAPI from "../../../utilities/portal/journals-api";
+import { act } from "react-dom/test-utils";
 
 export default function JournalEntry({ allEntries, setAllEntries , activeEntry, setActiveEntry }) {
     const [update, setUpdate] = useState(false);
     const [subject, setSubject] = useState("");
     const [body, setBody] = useState("");
 
+
     useEffect(() => {
-        setSubject(activeEntry.subject);
-        setBody(activeEntry.body)
+        if(activeEntry){
+            setSubject(activeEntry.subject);
+            setBody(activeEntry.body)
+        }
     }, [activeEntry]);
 
     const handleSubjectChange = (evt) => {
@@ -39,10 +43,17 @@ export default function JournalEntry({ allEntries, setAllEntries , activeEntry, 
 
     const handleDeleteClick = async (evt) => {
         try {
-            await journalAPI.deleteEntry(activeEntry);
-            const updatedEntries = allEntries.filter(entry => entry._id !== activeEntry._id);
-            setAllEntries(updatedEntries);
-            setActiveEntry(updatedEntries[0]);
+            await journalAPI.deleteEntry(activeEntry);            
+            const updatedEntries = await journalAPI.getAll();
+
+            if(allEntries){
+                setAllEntries(updatedEntries);
+                setActiveEntry(updatedEntries[0]);
+            } else {
+                setAllEntries([]);
+                setActiveEntry(false);
+            };
+
         } catch (err) {
             throw new Error();
         }
@@ -56,16 +67,17 @@ export default function JournalEntry({ allEntries, setAllEntries , activeEntry, 
             year: 'numeric',
         });
     };
+    
 
     return (
         <>
             <section id="journal-entry">
                 <div>
-                    {activeEntry._id ?
+                    {activeEntry ?
                         <>
                             {!update ?
                                 <>
-                                    <div>{subject}</div>
+                                    <div>{activeEntry ? subject : ""}</div>
                                     <div>{activeEntry ? formattedDate(activeEntry.createdAt)  : ""}</div>
                                     <div>{body}</div>
                                     <button onClick={() => setUpdate(!update)}> Update</button>

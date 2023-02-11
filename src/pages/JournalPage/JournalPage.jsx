@@ -10,7 +10,7 @@ import NewEntry from "./components/NewEntry"
 
 export default function JournalPage({ user, setUser }) {
     const [allEntries, setAllEntries] = useState([]);
-    const [activeEntry, setActiveEntry] = useState([]);
+    const [activeEntry, setActiveEntry] = useState(false);
     const [toggleToNewEntry, setToggleToNewEntry] = useState(false);
     const [newEntry, setNewEntry] = useState({
         subject: "",

@@ -1,10 +1,36 @@
 import "./SideBar.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function SideBar({ allEntries, activeEntry, setActiveEntry, toggleToNewEntry, setToggleToNewEntry }) {
+    const [entries, setEntries] = useState([]);
+
+    const formattedDate = (x) => {
+        return new Date(x).toLocaleDateString('en-US', {
+            month: 'long',
+            day: 'numeric',
+            year: 'numeric',
+        });
+    };
 
     useEffect(() => {
-        console.log("allEntries updated");
+        const entries = allEntries.map((entry) => {
+            // to shorten subject display:
+            if (entry.subject.length > 8) {
+                entry.subject = entry.subject.slice(0, 8) + "...";
+            };
+            return (
+                <li
+                    key={entry._id}
+                    className={entry._id === activeEntry._id ? "active" : ""}
+                    onClick={() => setActiveEntry(entry)}
+                >
+                    <h3>{entry.subject}</h3>
+                    <p>{formattedDate(entry.createdAt)}</p>
+                </li>
+            );
+        });
+
+        setEntries(entries)
     }, [allEntries])
 
 
@@ -15,17 +41,10 @@ export default function SideBar({ allEntries, activeEntry, setActiveEntry, toggl
                 <button type="submit" onClick={() => setToggleToNewEntry(!toggleToNewEntry)}>New</button>
             </div>
 
+
             <nav>
                 <ul>
-                    {allEntries.map((entry) =>
-                        <li
-                            key={entry._id}
-                            className={entry._id === activeEntry._id ? "active" : ""}
-                            onClick={() => setActiveEntry(entry)}
-                        >
-                            <h3>{entry.subject}</h3>
-                            <p>{entry.formattedDate}</p>
-                        </li>)}
+                    {entries}
                 </ul>
             </nav>
         </section>
