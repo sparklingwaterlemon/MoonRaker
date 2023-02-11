@@ -31,17 +31,14 @@ export default function ConstructionDisplay() {
             <div className="c-border">
                 <div className="c-signpost">
 
-                    <span className="c-header">UNDER re-CONSTRUCTION</span>
-                    <span className="c-update">LAST MODIFIED ON {text}</span> 
-
-                    Update - Basic - able to Create Journal Entries and Update.
+                    <span className="c-header">COMPLETE</span>
+                    <p className="c-update">LAST MODIFIED ON {text}</p> 
+                    <p>Website is best experienced through the Chrome Browser</p>
+                    <p>Full CRUD for journal entries. Minor features/ css to add. MVP</p>
                     <br/>
-                    Need to fix bugs
-                    <h4>Website is best experienced through the Chrome Browser</h4>
-
                     <div className="c-links">
                         <a href="https://github.com/sparklingwaterlemon/The-Great-Gig-in-the-Sky" target="_blank" rel="noreferrer">github</a>
-                        <a href="https://trello.com/b/k0eXcd3V/moon-raker" target="_blank" rel="noreferrer">trello board</a>
+                        {/* <a href="https://trello.com/b/k0eXcd3V/moon-raker" target="_blank" rel="noreferrer">trello board</a> */}
                         <button onClick={scrollDown}>Refresh Scroll</button>
                     </div>
                 </div>
