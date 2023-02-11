@@ -1,9 +1,9 @@
 import "./Portal.css";
 import { useState } from "react";
-import { getUser } from "../../utilities/portal/users-service"
+import { getUser } from "./utilities/users-service";
 
-import JournalPage from "../JournalPage/JournalPage";
-import AuthPage from "../AuthPage/AuthPage";
+import JournalPage from "./pages/JournalPage/JournalPage";
+import AuthPage from "./pages/AuthPage/AuthPage";
 
 
 export default function PortalPage() {
