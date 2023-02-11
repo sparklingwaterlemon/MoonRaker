@@ -51,7 +51,7 @@ export default function JournalEntry({ allEntries, setAllEntries , activeEntry, 
                 setActiveEntry(updatedEntries[0]);
             } else {
                 setAllEntries([]);
-                setActiveEntry(false);
+                setActiveEntry();
             };
 
         } catch (err) {
@@ -67,7 +67,6 @@ export default function JournalEntry({ allEntries, setAllEntries , activeEntry, 
             year: 'numeric',
         });
     };
-    
 
     return (
         <>

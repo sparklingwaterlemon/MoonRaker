@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 
 export default function SideBar({ allEntries, activeEntry, setActiveEntry, toggleToNewEntry, setToggleToNewEntry }) {
     const [entries, setEntries] = useState([]);
+    const [activated, setActivated] = useState("");
 
     const formattedDate = (x) => {
         return new Date(x).toLocaleDateString('en-US', {
@@ -11,19 +12,23 @@ export default function SideBar({ allEntries, activeEntry, setActiveEntry, toggl
             year: 'numeric',
         });
     };
+    
+
+
 
     useEffect(() => {
         const entries = allEntries.map((entry) => {
             // to shorten subject display:
-            if (entry.subject.length > 8) {
+            if(entry.subject.length > 8) {
                 entry.subject = entry.subject.slice(0, 8) + "...";
             };
+
             return (
                 <li
                     key={entry._id}
-                    className={entry._id === activeEntry._id ? "active" : ""}
                     onClick={() => setActiveEntry(entry)}
-                >
+                    className={activeEntry && entry._id === activeEntry._id ? "active" : "" }
+                    >
                     <h3>{entry.subject}</h3>
                     <p>{formattedDate(entry.createdAt)}</p>
                 </li>
@@ -31,7 +36,7 @@ export default function SideBar({ allEntries, activeEntry, setActiveEntry, toggl
         });
 
         setEntries(entries)
-    }, [allEntries])
+    }, [activeEntry, allEntries])
 
 
     return (
