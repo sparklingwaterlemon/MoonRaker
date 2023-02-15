@@ -134,6 +134,8 @@ For the moon images, the project has the 365 days of the year with corresponding
 #### Main Driver
 The following code block shows the main driver for updating the moon image:
 
+![Screen Shot 2023-02-14 at 4 54 54 PM](https://user-images.githubusercontent.com/105463926/218914061-344712e7-316d-42cd-afd7-efca7bd9a077.png)
+
 ```
 useEffect(() => {
     var html = document.documentElement;
