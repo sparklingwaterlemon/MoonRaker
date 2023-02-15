@@ -17,8 +17,8 @@ export async function sendRequest(url, method="GET", payload=null){
         options.headers.Authorization = `Bearer ${token}`;
     };
 
-    console.log("helper function options", options);
-    console.log("url", url)
+    // console.log("helper function options", options);
+    // console.log("url", url)
     
     const res = await fetch(url, options);
 

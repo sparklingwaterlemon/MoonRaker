@@ -16,7 +16,7 @@ export default function NewEntry({
         try{
             journalAPI.addEntry(newEntry);
             journalAPI.getAll().then(allEntries => {
-                console.log("getting all entries 2");
+                // console.log("getting all entries 2");
                 allEntries ? setAllEntries(allEntries) : setAllEntries([]);
             });
         } catch (err){

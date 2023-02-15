@@ -25,7 +25,7 @@ async function index(req,res){
 
 async function update(req,res){
     const updatedEntry = req.body;
-    console.log("controller", req.body);
+    // console.log("controller", req.body);
     try{
         const entry = await Journal.findByIdAndUpdate(updatedEntry._id, { 
             $set: { 

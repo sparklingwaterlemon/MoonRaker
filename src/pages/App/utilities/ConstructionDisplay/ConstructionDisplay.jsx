@@ -15,13 +15,13 @@ export default function ConstructionDisplay() {
             top: 0,
             left: 0,
         });
-        console.log("button - top out");
+        // console.log("button - top out");
         window.scroll({
             top: sft2,
             left: 0,
             behavior: "smooth"
         });
-        console.log("button - to today");
+        // console.log("button - to today");
     };
 
 

@@ -21,7 +21,7 @@ export default function JournalPage({ user, setUser }) {
     useEffect(() => {
         const getAllEntries = () => {
             journalAPI.getAll().then(allEntries => {
-                console.log("getting all entries 1");
+                // console.log("getting all entries 1");
                 allEntries ? setAllEntries(allEntries) : setAllEntries([])
             });
         }
