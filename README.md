@@ -3,7 +3,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/sparklingwaterlemon/MoonRaker">
+  <a href="https://the-great-gig-in-the-sky.herokuapp.com">
     <img 
         src="https://i.imgur.com/EbtPEBv.jpg"
         alt="Logo"
