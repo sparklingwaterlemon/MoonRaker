@@ -31,10 +31,10 @@ export default function ConstructionDisplay() {
             <div className="c-border">
                 <div className="c-signpost">
 
-                    <span className="c-header">COMPLETE</span>
+                    <span className="c-header">COMPLETED</span>
                     <p className="c-update">LAST MODIFIED ON {text}</p> 
                     <p>Website is best experienced through the Chrome Browser</p>
-                    <p>Full CRUD for journal entries. Minor features/ css to add. MVP</p>
+                    <p>Completed ReadMe on GitHub</p>
                     <br/>
                     <div className="c-links">
                         <a href="https://github.com/sparklingwaterlemon/The-Great-Gig-in-the-Sky" target="_blank" rel="noreferrer">github</a>
