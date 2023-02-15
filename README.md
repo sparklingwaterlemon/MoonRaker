@@ -136,20 +136,6 @@ The following code block shows the main driver for updating the moon image:
 
 ![Screen Shot 2023-02-14 at 4 54 54 PM](https://user-images.githubusercontent.com/105463926/218914061-344712e7-316d-42cd-afd7-efca7bd9a077.png)
 
-```
-useEffect(() => {
-    var html = document.documentElement;
-    var maxScrollHeight = html.scrollHeight - html.clientHeight;
-    var msh = maxScrollHeight;
-    var scrollFraction = (scrollLocation / msh);
-    const frameIndex = Math.floor(scrollFraction * frameCount);
-    
-    const updateMoon = new Image();
-    updateMoon.src = currentFrame(frameIndex);
-    updateMoon.onload = () => setImage(updateMoon);
-}, [scrollLocation]);
-```
-
 Every time the scroll location is updated, this useEffect is triggered. The maximum scrollable distance is calculated, the scroll fraction is determined, and the appropriate frame index is calculated. A separate useEffect is used to draw and render the image.
 
 
