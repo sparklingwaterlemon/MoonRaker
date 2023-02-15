@@ -81,6 +81,8 @@
 
 https://user-images.githubusercontent.com/105463926/218918010-2682dc4b-a563-4575-8c09-0e8a5ff09d13.mp4
 
+
+
 Hello and welcome to my Moon Raker project! My name is Michael Kim, and I am the developer behind this project.
 
 The Moon Raker project is an application that provides users with a way to keep track of their thoughts and experiences, while also providing them with useful information like weather and astrological data. The project is divided into four main parts:
