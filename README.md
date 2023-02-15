@@ -164,28 +164,18 @@ The Moon Raker project uses JWT-based authentication and authorization to ensure
 #### Password Hashing
 
 When a user signs up, the client-side code sends an AJAX request to the server with the user's data. The server-side code then uses the bcrypt library to salt and hash the user's password before saving it to a database. A mongoose userSchema.pre() function is used to perform the password hashing and salting on the server side.
-```
-userSchema.pre('save', function(next){
-    const user = this;
-    if(!user.isModified('password')) return next();
-    // if password has been changed - salt and hash it
-    bcrypt.hash(user.password, SALT_ROUNDS, function(err, hash){
-        if (err) return next(err);
-        user.password = hash;
-        return next();
-    });
-});
-```
+
+![Screen Shot 2023-02-14 at 6 02 53 PM](https://user-images.githubusercontent.com/105463926/218914246-b9a6e854-3a22-4c81-8b46-0e2b7d270767.png)
+
+
 
 #### JSON Web Token (JWT)
 
 After a user is successfully signed up, a JWT is created and returned to the client. The JWT is signed with a secret key and includes the user as a payload.
 
-```
-function createJWT(user){
-    return jwt.sign({ user }, process.env.SECRET, {expiresIn: '24h'})
-};
-```
+![Screen Shot 2023-02-14 at 6 03 38 PM](https://user-images.githubusercontent.com/105463926/218914271-6b4fd429-3b9f-49f5-b792-dac81a2026b9.png)
+
+
 The client-side code saves the JWT to the browser's local storage, which makes it available for subsequent requests to the server. The server can then use the JWT to authenticate and authorize the user's access to protected resources.
 
 #### Authorization Middleware
@@ -194,9 +184,8 @@ To ensure that only authenticated users can access protected resources, the serv
 
 Here's an example of how the middleware function can be used to protect a resource that requires authentication:
 
-```
-ensured login
-```
+![Screen Shot 2023-02-14 at 6 04 26 PM](https://user-images.githubusercontent.com/105463926/218914288-27f70771-431f-426d-bda3-dde115c56a5a.png)
+
 
 This middleware function can be used to protect any resource that requires authentication. By verifying the JWT and extracting the user ID from the payload, the middleware ensures that only authenticated users can access protected resources.
 
