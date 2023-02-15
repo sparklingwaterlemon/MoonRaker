@@ -265,20 +265,11 @@ Don't forget to give the project a star! Thanks again!
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
 <!-- CONTACT -->
 ## Contact
 
 Michael Kim
+
 Email: michael.dev.kim@gmail.com
 
 LinkedIn: [https://www.linkedin.com/in/michaelkim3/](https://www.linkedin.com/in/michaelkim3/)
