@@ -3,7 +3,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/sparklingwaterlemon/MoonRaker">
+  <a href="https://the-great-gig-in-the-sky.herokuapp.com">
     <img 
         src="https://i.imgur.com/EbtPEBv.jpg"
         alt="Logo"
@@ -79,7 +79,10 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+https://user-images.githubusercontent.com/105463926/218918010-2682dc4b-a563-4575-8c09-0e8a5ff09d13.mp4
+
+<br />
+<br />
 
 Hello and welcome to my Moon Raker project! My name is Michael Kim, and I am the developer behind this project.
 
@@ -134,19 +137,7 @@ For the moon images, the project has the 365 days of the year with corresponding
 #### Main Driver
 The following code block shows the main driver for updating the moon image:
 
-```
-useEffect(() => {
-    var html = document.documentElement;
-    var maxScrollHeight = html.scrollHeight - html.clientHeight;
-    var msh = maxScrollHeight;
-    var scrollFraction = (scrollLocation / msh);
-    const frameIndex = Math.floor(scrollFraction * frameCount);
-    
-    const updateMoon = new Image();
-    updateMoon.src = currentFrame(frameIndex);
-    updateMoon.onload = () => setImage(updateMoon);
-}, [scrollLocation]);
-```
+![Screen Shot 2023-02-14 at 4 54 54 PM](https://user-images.githubusercontent.com/105463926/218914061-344712e7-316d-42cd-afd7-efca7bd9a077.png)
 
 Every time the scroll location is updated, this useEffect is triggered. The maximum scrollable distance is calculated, the scroll fraction is determined, and the appropriate frame index is calculated. A separate useEffect is used to draw and render the image.
 
@@ -176,28 +167,18 @@ The Moon Raker project uses JWT-based authentication and authorization to ensure
 #### Password Hashing
 
 When a user signs up, the client-side code sends an AJAX request to the server with the user's data. The server-side code then uses the bcrypt library to salt and hash the user's password before saving it to a database. A mongoose userSchema.pre() function is used to perform the password hashing and salting on the server side.
-```
-userSchema.pre('save', function(next){
-    const user = this;
-    if(!user.isModified('password')) return next();
-    // if password has been changed - salt and hash it
-    bcrypt.hash(user.password, SALT_ROUNDS, function(err, hash){
-        if (err) return next(err);
-        user.password = hash;
-        return next();
-    });
-});
-```
+
+![Screen Shot 2023-02-14 at 6 02 53 PM](https://user-images.githubusercontent.com/105463926/218914246-b9a6e854-3a22-4c81-8b46-0e2b7d270767.png)
+
+
 
 #### JSON Web Token (JWT)
 
 After a user is successfully signed up, a JWT is created and returned to the client. The JWT is signed with a secret key and includes the user as a payload.
 
-```
-function createJWT(user){
-    return jwt.sign({ user }, process.env.SECRET, {expiresIn: '24h'})
-};
-```
+![Screen Shot 2023-02-14 at 6 03 38 PM](https://user-images.githubusercontent.com/105463926/218914271-6b4fd429-3b9f-49f5-b792-dac81a2026b9.png)
+
+
 The client-side code saves the JWT to the browser's local storage, which makes it available for subsequent requests to the server. The server can then use the JWT to authenticate and authorize the user's access to protected resources.
 
 #### Authorization Middleware
@@ -206,9 +187,8 @@ To ensure that only authenticated users can access protected resources, the serv
 
 Here's an example of how the middleware function can be used to protect a resource that requires authentication:
 
-```
-ensured login
-```
+![Screen Shot 2023-02-14 at 6 04 26 PM](https://user-images.githubusercontent.com/105463926/218914288-27f70771-431f-426d-bda3-dde115c56a5a.png)
+
 
 This middleware function can be used to protect any resource that requires authentication. By verifying the JWT and extracting the user ID from the payload, the middleware ensures that only authenticated users can access protected resources.
 
