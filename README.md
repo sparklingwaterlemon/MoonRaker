@@ -217,10 +217,47 @@ Overall, the journal functionality of the Project Name project provides a way fo
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
+- [ ] INDEX.JS
+  - [ ] ERRORPAGE
+  - [ ] ABOUTPAGE
+  - [ ] APP
+    - [ ] PreLoadImagesFunc
+    - [ ] BackgroundComponent
+    - [ ] MoonSection
+    - [ ] DuaLipa
+    - [ ] AboutLinkComponent
+    - [ ] FormSection
+      - [ ] PortalLinkComponent
+      - [ ] SearchBarComponent
+    - [ ] FlipDisplaySection
+      - [ ] ASideDatePhase
+      - [ ] BSideWeatherAstro
+    - [ ] ConstructionDisplay
+    - [ ] SettingScrollFunc
+    - [ ] SpikingScrollFunc
+  - [ ] PORTAL
+    - [ ] AuthPage
+      - [ ] SignUpForm
+      - [ ] SignInForm
+    - [ ] JournalPage
+      - [ ] PortalNavBar
+        - [ ] LogOut 
+      - [ ] SideBar
+      - [ ] JournalEntry
+      - [ ] NewEntry
+
+<br />
+
+###### AJAX Request Path Client to Server:
+
+<-- "src/pages/Portal/utilities/users-services.js" --> 
+<-- "./users-api.js" --> 
+<-- server.js --> 
+<-- config (middlewares) -->
+<-- routes -->
+<-- controller -->
+
+
 
 See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
 
