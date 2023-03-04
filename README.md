@@ -250,12 +250,12 @@ Overall, the journal functionality of the Project Name project provides a way fo
 
 ###### AJAX Request Path Client to Server:
 
-<-- "src/pages/Portal/utilities/users-services.js" --> 
-<-- "./users-api.js" --> 
-<-- server.js --> 
-<-- config (middlewares) -->
-<-- routes -->
-<-- controller -->
+<-- "src/pages/Portal/utilities/users-services.js" --> <br/>
+<-- "./users-api.js" --> <br/>
+<-- server.js --> <br/>
+<-- config (middlewares) --> <br/>
+<-- routes --> <br/>
+<-- controller --> <br/>
 
 
 
